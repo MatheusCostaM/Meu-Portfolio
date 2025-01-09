@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from "styled-components";
 
-// Estilização do Move
 const Move = styled.div.attrs(props => ({
     style: {
         left: `${props.x}px`,
@@ -19,7 +18,6 @@ const Move = styled.div.attrs(props => ({
 
 function mudarLimite(limite) {
     const novoLimite = limite + (((Math.floor(Math.random() * (limite / 2)) - limite / 4)) + limite / 2);
-    console.log(novoLimite);
     return novoLimite;
 }
 
@@ -41,7 +39,7 @@ function movimento(direcao, limite, posicao, velocidade, limiteFixo) {
         }
     }
 
-    return [direcao, limite, posicao];
+    return [direcao, limite, posicao, velocidade, limiteFixo];
 
 }
 export default ({ children }) => {
@@ -62,7 +60,6 @@ export default ({ children }) => {
                 let novosValores = [];
 
                 novosValores = movimento(newDirecaoX, newLimiteX, newX, velocidade, limiteFixo);
-                console.log(novosValores);
                 [newDirecaoX, newLimiteX, newX] = novosValores;
 
                 novosValores = movimento(newDirecaoY, newLimiteY, newY, velocidade, limiteFixo);
