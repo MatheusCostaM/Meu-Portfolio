@@ -3,6 +3,8 @@ import Move from './componentes/Move';
 import Vidro from './componentes/Vidro';
 import meuIcone from './assets/img/alura.svg';
 import Interagible from './componentes/Interagible';
+import Neon from './componentes/Neon'
+import MoveSimple from './componentes/MoveSimple';
 
 
 function App() {
@@ -10,13 +12,11 @@ function App() {
   return (
     <body>
       <Vidro>
-
-        <Move>
+        <MoveSimple>
           <Interagible>
             <img src={meuIcone}></img>
           </Interagible>
-        </Move>
-
+        </MoveSimple>
       </Vidro>
     </body>
   );
