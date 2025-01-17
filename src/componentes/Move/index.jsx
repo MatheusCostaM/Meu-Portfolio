@@ -55,7 +55,7 @@ export default ({ children }) => {
 
     //cria os "states" de função.
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [limite, setLimite] = useState({ x: 5, y: 5, limite: 5 });
+    const [limite, setLimite] = useState({ x: 150, y: 150, limite: 300 });
     const [direcao, setDireacao] = useState({ x: "aumentar", y: "aumentar" });
 
     useEffect(() => {

@@ -1,24 +1,18 @@
 import React from 'react';
-import Move from './componentes/Move';
-import Vidro from './componentes/Vidro';
-import meuIcone from './assets/img/alura.svg';
-import Interagible from './componentes/Interagible';
-import Neon from './componentes/Neon'
-import MoveSimple from './componentes/MoveSimple';
+import Navbar from './componentes/Navbar';
+import { GlobalStyle } from './componentes/GlobalStyle';
+import MenuLateral from './componentes/MenuLateral';
 
 
 function App() {
 
   return (
-    <body>
-      <Vidro>
-        <MoveSimple>
-          <Interagible>
-            <img src={meuIcone}></img>
-          </Interagible>
-        </MoveSimple>
-      </Vidro>
-    </body>
+    <>
+      <GlobalStyle />
+      <Navbar />
+      <MenuLateral />
+    </>
+
   );
 }
 
