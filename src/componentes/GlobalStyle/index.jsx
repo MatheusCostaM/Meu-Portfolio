@@ -12,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(360deg, rgba(0, 7, 7, 1) 25%, rgba(0, 0, 0, 1) 75%);
+    background: linear-gradient(360deg, rgba(0, 15, 15, 1) 25%, rgba(0, 0, 0, 1) 75%);
   }
 `;

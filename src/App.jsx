@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './componentes/Navbar';
 import { GlobalStyle } from './componentes/GlobalStyle';
 import MenuLateral from './componentes/MenuLateral';
+import Background from './componentes/Background';
 
 
 function App() {
@@ -9,8 +10,11 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
-      <MenuLateral />
+      <Background>
+
+        <Navbar />
+        <MenuLateral />
+      </Background>
     </>
 
   );

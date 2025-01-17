@@ -5,102 +5,115 @@ const Move = styled.div.attrs(props => ({
     style: {
         left: `${props.x}px`,
         top: `${props.y}px`,
+        transform: `rotate(${props.rote}deg)`,
     },
 }))`
-    /* Posição do children */
-    display: flex;
-    position: absolute;
+/* Posição do children */
+display: flex;
+position: absolute;
 
-    /* Tamanho da div */
-    width: 30vw;
-    height: 20vh;
-    
-    /* transição para o movimento */
-    transition: left 0.4s ease-in-out;
-    transition: top 0.4s ease-in-out;
-  `;
+/* transição para o movimento */
+transition: left 0.4s ease-in-out, top 0.4s ease-in-out, transform 0.4s ease-in-out;
+`;
 
-function mudarLimite(limite) {
+function mudarRotation(newRotate, velocidade) {
 
-    //cria um calculo onde o limite pode aumentar ou reduzir.
-    const novoLimite = limite + (((Math.floor(Math.random() * (limite / 2)) - limite / 4)) + limite / 2);
-    return novoLimite;
+    let resultado = newRotate + (parseFloat(velocidade)) / 10;
+
+    if (resultado > 360) {
+        resultado = resultado % 360;
+    }
+
+    return resultado;
+}
+
+function mudarLimite(limiteFixo) {
+    return limiteFixo + (Math.floor(Math.random() * (limiteFixo / 2)) - limiteFixo / 4);
 }
 
 function movimento(direcao, limite, posicao, velocidade, limiteFixo) {
-
-    //analisa a direção setada, cria o movimento com a velocide e inverte a direção ao chegar no limite.
-    if (direcao == "aumentar") {
+    if (direcao === "aumentar") {
         if (posicao < limite) {
-            posicao += velocidade;
+            posicao += parseFloat(velocidade);
         } else {
-            posicao -= velocidade;
+            posicao -= parseFloat(velocidade);
             direcao = "diminuir";
             limite = mudarLimite(limiteFixo);
         }
     } else {
-        //aqui o limite é dividido por 5 para criar um limite em outra direção.
-        if (posicao >= (limite / 5)) {
-            posicao -= velocidade;
+        if (posicao >= (0 - limite / 2)) {
+            posicao -= parseFloat(velocidade);
         } else {
-            posicao += velocidade;
+            posicao += parseFloat(velocidade);
             direcao = "aumentar";
         }
     }
 
-    return [direcao, limite, posicao, velocidade, limiteFixo];
-
+    return [direcao, limite, posicao];
 }
-export default ({ children }) => {
 
-    //cria os "states" de função.
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [limite, setLimite] = useState({ x: 150, y: 150, limite: 300 });
-    const [direcao, setDireacao] = useState({ x: "aumentar", y: "aumentar" });
+export default ({ children, velocidade }) => {
+    const [rotation, setRotation] = useState(0);
+    const [position, setPosition] = useState(() => {
+        const iniPositionX = Math.floor(Math.random() * window.innerWidth);
+        const iniPositionY = Math.floor(Math.random() * window.innerHeight);
+        return { x: iniPositionX, y: iniPositionY };
+    });
+    const [direcao, setDirecao] = useState(() => {
+        const iniDirectionX = (Math.random() < 0.5) ? "diminuir" : "aumentar";;
+        const iniDirectionY = (Math.random() < 0.5) ? "diminuir" : "aumentar";;
+        return { x: iniDirectionX, y: iniDirectionY };
+    });
+    const [limite, setLimite] = useState(() => {
+        const limiteFixo = (window.innerWidth + window.innerHeight) / 2;
+        return { x: window.innerWidth, y: window.innerHeight, limiteFixo };
+    });
 
     useEffect(() => {
+        const atualizarLimites = () => {
+            const limiteFixo = (window.innerWidth + window.innerHeight) / 2;
+            setLimite({ x: window.innerWidth, y: window.innerHeight, limiteFixo });
+        };
 
-        //set um intervalo de 100mls para a ação.
+        // Atualiza limites ao redimensionar a janela
+        window.addEventListener("resize", atualizarLimites);
+
         const interval = setInterval(() => {
-
-            //seta a posição com base na atual (prev).
             setPosition((prev) => {
-
-                //seta as novas variaveis com os states atuais que irão alterar os states
+                let newRotate = rotation;
                 let [newX, newY] = [prev.x, prev.y];
                 let [newDirecaoX, newDirecaoY] = [direcao.x, direcao.y];
-                let [newLimiteX, newLimiteY, limiteFixo] = [limite.x, limite.y, limite.limite];
+                let [newLimiteX, newLimiteY, limiteFixo] = [limite.x, limite.y, limite.limiteFixo];
 
-                const velocidade = 0.5;
 
-                let novosValores = [];
+                let novosValores;
 
-                //recebe os valores de x e passa para as variaveis de x.
+                // Atualiza posição e direção em X
                 novosValores = movimento(newDirecaoX, newLimiteX, newX, velocidade, limiteFixo);
                 [newDirecaoX, newLimiteX, newX] = novosValores;
 
-                //recebe os valores de x e passa para as variaveis de x.
+                // Atualiza posição e direção em Y
                 novosValores = movimento(newDirecaoY, newLimiteY, newY, velocidade, limiteFixo);
                 [newDirecaoY, newLimiteY, newY] = novosValores;
 
-                //altera os "states"
-                setDireacao({ x: newDirecaoX, y: newDirecaoY });
-                setLimite({ x: newLimiteX, y: newLimiteY, limite: limiteFixo });
+                newRotate = mudarRotation(newRotate, velocidade);
 
-                //retorna as novas posições que vão para o style do obj
+                setDirecao({ x: newDirecaoX, y: newDirecaoY });
+                setLimite({ x: newLimiteX, y: newLimiteY, limiteFixo });
+                setRotation(newRotate);
+
                 return { x: newX, y: newY };
             });
+        }, 300);
 
-        }, 100);
-
-        //limpa o intervalo.
-        return () => clearInterval(interval);
-
-        //fecha o efeito e define direcao como o observavel 
-    }, [direcao]);
+        return () => {
+            clearInterval(interval);
+            window.removeEventListener("resize", atualizarLimites);
+        };
+    }, [direcao, limite, velocidade]);
 
     return (
-        <Move x={position.x} y={position.y}>
+        <Move x={position.x} y={position.y} rote={rotation}>
             {children}
         </Move>
     );
