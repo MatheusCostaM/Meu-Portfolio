@@ -29,31 +29,31 @@ border-radius: 50%;
 export default ({ children }) => {
     return (
         <Background>
-            <Move velocidade="21">
+            <Move velocidade="7">
                 <Neon><Circulo /></Neon>
             </Move>
-            <Move velocidade="12">
+            <Move velocidade="4">
                 <Neon><Circulo /></Neon>
             </Move>
-            <Move velocidade="6">
+            <Move velocidade="2">
                 <Neon><Circulo /></Neon>
             </Move>
-            <Move velocidade="6">
+            <Move velocidade="2">
                 <Neon><Quadrado /></Neon>
             </Move>
-            <Move velocidade="12">
+            <Move velocidade="2">
                 <Neon><Quadrado /></Neon>
             </Move>
-            <Move velocidade="21">
+            <Move velocidade="7">
                 <Neon><Quadrado /></Neon>
             </Move>
-            <Move velocidade="21">
+            <Move velocidade="7">
                 <Neon><Circulo /></Neon>
             </Move>
-            <Move velocidade="6">
+            <Move velocidade="4">
                 <Neon><Circulo /></Neon>
             </Move>
-            <Move velocidade="12">
+            <Move velocidade="4">
                 <Neon><Quadrado /></Neon>
             </Move>
             {children}

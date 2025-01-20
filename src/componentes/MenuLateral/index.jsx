@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Vidro from '../Vidro'
 import Menu from '../Menu'
 import Interagible from '../Interagible'
-import Text2 from '../Text2';
+import Text from '../Text';
 
 const MenuLateral = styled.div`
 
@@ -25,13 +25,13 @@ export default () => {
             <Vidro BordaCurva="20px">
                 <Menu Posicao="vertical">
                     <Interagible>
-                        <Text2>Apresentação</Text2>
+                        <Text>Apresentação</Text>
                     </Interagible>
                     <Interagible>
-                        <Text2>Projetos</Text2>
+                        <Text>Projetos</Text>
                     </Interagible>
                     <Interagible>
-                        <Text2>Contato</Text2>
+                        <Text>Contato</Text>
                     </Interagible>
                 </Menu>
             </Vidro>

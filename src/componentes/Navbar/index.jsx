@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Vidro from '../Vidro'
 import Menu from '../Menu'
 import Interagible from '../Interagible'
-import Text2 from '../Text2';
+import Text from '../Text';
 import Tema from '../Tema';
 import Lingua from '../Lingua';
 
@@ -17,21 +17,21 @@ position: fixed;
 
 `
 
-export default () => {
+export default ({ TrocaTema }) => {
     return (
 
         <Navbar>
             <Vidro>
-                <Tema />
+                <Tema TrocaTema={TrocaTema} />
                 <Menu Posicao="horizontal">
                     <Interagible>
-                        <Text2>CONTATO</Text2>
+                        <Text>CONTATO</Text>
                     </Interagible>
                     <Interagible>
-                        <Text2>SOBRE</Text2>
+                        <Text>SOBRE</Text>
                     </Interagible>
                     <Interagible>
-                        <Text2>CURRICULO</Text2>
+                        <Text>CURRICULO</Text>
                     </Interagible>
                 </Menu>
                 <Lingua />
