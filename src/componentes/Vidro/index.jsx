@@ -19,12 +19,12 @@ const Vidro = styled.div`
     /* Tamanho da div */
     width: 100%;
     height: 100%;
-    border-radius: ${({ BordaCurva }) => BordaCurva || '0px'};
+    border-radius: ${({ $bordaCurva }) => $bordaCurva || '0px'};
 `;
 
-export default ({ children, BordaCurva }) => {
+export default ({ children, $bordaCurva }) => {
     return (
-        <Vidro BordaCurva={BordaCurva}>
+        <Vidro $bordaCurva={$bordaCurva}>
             {children}
         </Vidro>
     );

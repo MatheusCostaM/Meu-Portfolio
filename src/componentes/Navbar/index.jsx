@@ -23,7 +23,7 @@ export default ({ TrocaTema }) => {
         <Navbar>
             <Vidro>
                 <Tema TrocaTema={TrocaTema} />
-                <Menu Posicao="horizontal">
+                <Menu $posicao="horizontal">
                     <Interagible>
                         <Text>CONTATO</Text>
                     </Interagible>

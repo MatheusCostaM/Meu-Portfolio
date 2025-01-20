@@ -4,17 +4,17 @@ import styled from "styled-components";
 const Menu = styled.div`
 
 display: flex;
-flex-direction: ${({ Posicao }) => ((Posicao == "horizontal") ? "row" : "column")};
+flex-direction: ${({ $posicao }) => (($posicao == "horizontal") ? "row" : "column")};
 justify-content: space-around;
 width: auto;
 height: auto;
 `
 
-export default ({ children, Posicao }) => {
+export default ({ children, $posicao }) => {
 
 
     return (
-        <Menu Posicao={Posicao}>
+        <Menu $posicao={$posicao}>
             {children}
         </Menu>
     );

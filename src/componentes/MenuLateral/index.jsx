@@ -22,8 +22,8 @@ top: 50%;
 export default () => {
     return (
         <MenuLateral>
-            <Vidro BordaCurva="20px">
-                <Menu Posicao="vertical">
+            <Vidro $bordaCurva="20px">
+                <Menu $posicao="vertical">
                     <Interagible>
                         <Text>Apresentação</Text>
                     </Interagible>
