@@ -9,8 +9,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    display: flex;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(360deg, ${({ theme }) => theme.luz} 25%, ${({ theme }) => theme.body} 75%);
+    background: linear-gradient(270deg, ${({ theme }) => theme.luz} 25%, ${({ theme }) => theme.body} 75%);
+    flex-wrap: wrap;
+    justify-content: end;
+
   }
 `;

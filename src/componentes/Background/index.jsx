@@ -9,6 +9,7 @@ const Background = styled.div`
   width: 100vw;
   position: fixed;
   object-fit: contain;
+  justify-content: end;
   
 `;
 

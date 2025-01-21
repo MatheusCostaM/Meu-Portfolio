@@ -9,7 +9,7 @@ const MenuLateral = styled.div`
 
 display: flex;
 justify-content: space-between;
-width: 15vw;
+width: 14vw;
 height: 30vh;
 position: fixed;
 top: 50%;

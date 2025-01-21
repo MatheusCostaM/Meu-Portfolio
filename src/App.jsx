@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { temaClaro, temaEscuro } from './componentes/UI/temas';
 import MenuLateral from './componentes/MenuLateral';
 import Background from './componentes/Background';
+import Dashboard from './componentes/Dashboard';
 
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
     <>
       <ThemeProvider theme={tema}>
         <GlobalStyle />
-        <Background>
-
+        <Background />
+        <body>
           <Navbar TrocaTema={TrocaTema} />
           <MenuLateral />
-        </Background>
+          <Dashboard />
+        </body>
       </ThemeProvider>
 
     </>
