@@ -12,6 +12,11 @@ height: 100vh;
 flex-direction: column;
 text-align: center;
 
+div {
+    display: flex;
+    flex-direction: row;
+}
+
 
 `;
 
