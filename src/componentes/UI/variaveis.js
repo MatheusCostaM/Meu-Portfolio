@@ -1,7 +1,7 @@
 export const corPrimaria = "cian";
 
 export const fundoClaro = "white";
-export const luzFundoClaro = "#f0ffff";
+export const luzFundoClaro = "#dcffff";
 export const textoClaro = "black";
 
 export const fundoEscuro = "black";

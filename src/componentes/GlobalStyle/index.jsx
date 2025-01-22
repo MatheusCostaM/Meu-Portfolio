@@ -15,6 +15,6 @@ export const GlobalStyle = createGlobalStyle`
     background: linear-gradient(270deg, ${({ theme }) => theme.luz} 25%, ${({ theme }) => theme.body} 75%);
     flex-wrap: wrap;
     justify-content: end;
-
+    z-index: 1;
   }
 `;

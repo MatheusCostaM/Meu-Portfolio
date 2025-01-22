@@ -5,6 +5,7 @@ const Text = styled.h2`
 
 font-size: ${({ tamanhoText }) => tamanhoText}rem;
 color: ${({ theme }) => theme.txt};
+margin: 1vh;
 
 `
 

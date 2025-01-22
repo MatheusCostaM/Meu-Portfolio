@@ -12,7 +12,7 @@ const Vidro = styled.div`
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 5px 1px rgba(0, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px #00cad1;
     
     border: 1px solid rgba(0, 255, 255, 0.18);
 

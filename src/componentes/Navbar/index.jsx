@@ -14,6 +14,7 @@ justify-content: space-between;
 width:100vw;
 height: 10vh;
 position: fixed;
+z-index: 2;
 
 `
 

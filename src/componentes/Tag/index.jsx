@@ -11,6 +11,8 @@ import Node from '../../assets/img/node.svg';
 import Php from '../../assets/img/php.svg';
 import Python from '../../assets/img/py.svg';
 import ReactJS from '../../assets/img/react.svg';
+import Linkedin from '../../assets/img/linkedin.svg';
+import Github from '../../assets/img/github.svg';
 
 const Tag = styled.div`
 
@@ -54,6 +56,10 @@ export default ({ tipo }) => {
                 return Python;
             case "React":
                 return ReactJS;
+            case "Linkedin":
+                return Linkedin;
+            case "Github":
+                return Github;
         }
     }
 

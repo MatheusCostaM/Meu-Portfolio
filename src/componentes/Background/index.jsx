@@ -9,7 +9,15 @@ const Background = styled.div`
   width: 100vw;
   position: fixed;
   object-fit: contain;
-  justify-content: end;
+  justify-content: end; 
+  z-index: 0;
+  
+  
+
+  *{
+    opacity: 0.6;
+    
+  }
   
 `;
 
@@ -24,10 +32,7 @@ height: 100vh;
 border-radius: 50%;
 `;
 
-
-
-
-export default ({ children }) => {
+export default () => {
     return (
         <Background>
             <Move velocidade="7">
@@ -57,7 +62,6 @@ export default ({ children }) => {
             <Move velocidade="4">
                 <Neon><Quadrado /></Neon>
             </Move>
-            {children}
         </Background>
     );
 };

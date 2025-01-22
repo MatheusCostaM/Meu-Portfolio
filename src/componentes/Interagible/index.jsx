@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from "styled-components";
 
 const Interagible = styled.div`
@@ -9,6 +9,7 @@ const Interagible = styled.div`
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
+    opacity: ${({ isPressed }) => (isPressed ? 0.5 : 1)};
 
     /* Escala inicial e transição */
     & > * {
@@ -28,12 +29,28 @@ const Interagible = styled.div`
 
 export default ({ children }) => {
 
+    //cria constante para monitorar click
+    const [isPressed, setIsPressed] = useState(false);
+
+    //ao clickar a pelicula é abilitada
+    const handleMouseDown = () => {
+        setIsPressed(true);
+    };
+
+    //ao parar de clickar a pelicula é desabilitada
+    const handleMouseUp = () => {
+        setIsPressed(false);
+    };
 
     return (
-        <Interagible>
-            <div>
-                {children}
-            </div>
+        <Interagible
+            isPressed={isPressed}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+        >
+            {children}
         </Interagible>
+
     );
 };
