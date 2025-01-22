@@ -41,20 +41,17 @@ export default ({ nome }) => {
 
     for (let i = 0; i < Projetos.length; i++) {
 
-        console.log(Projetos[i].nome);
-        console.log(nome);
-
         if (Projetos[i].nome === nome) {
             titulo = Projetos[i].nome;
             imagem = Projetos[i].image;
             descricao = Projetos[i].descricao;
             link = Projetos[i].site;
             git = Projetos[i].git;
-            console.log("foi", titulo);
+
             break;
         }
 
-        console.log("projeto não encontrado");
+
     }
 
     return (

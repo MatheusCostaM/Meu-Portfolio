@@ -5,7 +5,7 @@ const Move = styled.div.attrs(props => ({
     style: {
         left: `${props.x}px`,
         top: `${props.y}px`,
-        transform: `rotate(${props.rote}deg)`,
+        transform: `rotate(${props.$rote}deg)`,
     },
 }))`
 /* Posição do children */
@@ -113,7 +113,7 @@ export default ({ children, velocidade }) => {
     }, [direcao, limite, velocidade]);
 
     return (
-        <Move x={position.x} y={position.y} rote={rotation}>
+        <Move x={position.x} y={position.y} $rote={rotation}>
             {children}
         </Move>
     );

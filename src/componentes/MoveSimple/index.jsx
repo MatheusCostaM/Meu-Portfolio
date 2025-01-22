@@ -8,7 +8,7 @@ const MoveSimple = styled.div`
     transition: transform 0.7s ease-in-out;
 
     /* Mudança de escala */
-    transform: scale(${({ isMove }) => (isMove ? 1 : 1.1)});
+    transform: scale(${({ $isMove }) => ($isMove ? 1 : 1.1)});
 }
 `
 
@@ -34,7 +34,7 @@ export default ({ children }) => {
     });
 
     return (
-        <MoveSimple isMove={isMove}>
+        <MoveSimple $isMove={isMove}>
             {children}
         </MoveSimple>
     );

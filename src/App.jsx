@@ -10,7 +10,7 @@ import Dashboard from './componentes/Dashboard';
 
 function App() {
 
-  const [tema, setTema] = useState(temaEscuro);
+  const [tema, setTema] = useState(temaClaro);
 
   function TrocaTema(text) {
     if (text === "Modo Claro") {
@@ -25,11 +25,11 @@ function App() {
       <ThemeProvider theme={tema}>
         <GlobalStyle />
         <Background />
-        <body>
+        <main>
           <Navbar TrocaTema={TrocaTema} />
           <MenuLateral />
           <Dashboard />
-        </body>
+        </main>
       </ThemeProvider>
 
     </>

@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  main {
     display: flex;
     height: 100vh;
     font-family: 'Poppins', sans-serif;

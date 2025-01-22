@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import Vidro from '../Vidro'
-import Menu from '../Menu'
-import Interagible from '../Interagible'
+import Vidro from '../Vidro';
+import Menu from '../Menu';
 import Text from '../Text';
 
 const MenuLateral = styled.div`
@@ -20,22 +19,17 @@ top: 50%;
 `
 
 export default () => {
+
     return (
         <MenuLateral>
             <Vidro $bordaCurva="20px">
                 <Menu $posicao="vertical">
-                    <Interagible>
-                        <Text>Apresentação</Text>
-                    </Interagible>
-                    <Interagible>
-                        <Text>Projetos</Text>
-                    </Interagible>
-                    <Interagible>
-                        <Text>Contato</Text>
-                    </Interagible>
+                    <>Apresentação</>
+                    <>Projetos</>
+                    <>Contato</>
                 </Menu>
             </Vidro>
-        </MenuLateral>
+        </MenuLateral >
 
     );
 }

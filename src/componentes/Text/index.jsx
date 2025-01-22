@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const Text = styled.h2`
 
-font-size: ${({ tamanhoText }) => tamanhoText}rem;
-color: ${({ theme }) => theme.txt};
+font-size: ${({ $tamanhoText }) => $tamanhoText}rem;
+color: ${({ $tipoText, theme }) =>
+        $tipoText === "titulo2" ? theme.corPrincipal : theme.txt};
 margin: 1vh;
 
 `
@@ -35,7 +36,7 @@ export default ({ children, tipoText }) => {
     const tamanhoText = getTamanhoText(tipoText);
 
     return (
-        <Text tamanhoText={tamanhoText}>
+        <Text $tamanhoText={tamanhoText} $tipoText={tipoText}>
             {children}
         </Text>
     )

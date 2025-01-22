@@ -9,7 +9,7 @@ const Interagible = styled.div`
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    opacity: ${({ isPressed }) => (isPressed ? 0.5 : 1.2)};
+    opacity: ${({ $isPressed }) => ($isPressed ? 0.5 : 1.2)};
 
     /* Escala inicial e transição */
     & > * {
@@ -44,7 +44,7 @@ export default ({ children }) => {
 
     return (
         <Interagible
-            isPressed={isPressed}
+            $isPressed={isPressed}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
