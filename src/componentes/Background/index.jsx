@@ -11,8 +11,6 @@ const Background = styled.div`
   object-fit: contain;
   justify-content: end; 
   z-index: 0;
-  
-  
 
   *{
     opacity: 0.6;

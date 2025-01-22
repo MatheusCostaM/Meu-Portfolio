@@ -35,8 +35,6 @@ export default ({ tipo }) => {
 
     const qualTipo = (tipo) => {
 
-        console.log(1);
-
         switch (tipo) {
             case "JavaScript":
                 return JavaScript;

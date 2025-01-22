@@ -5,6 +5,7 @@ import Text from '../Text';
 import Tag from '../Tag';
 import foto from '../../assets/img/foto.svg';
 import Neon from '../Neon';
+import Projeto from '../Projeto';
 
 const Dashboard = styled.div`
 
@@ -36,7 +37,7 @@ export default () => {
 
     return (
         <Dashboard>
-            <Container>
+            <Container id="container1">
                 <div>
                     <section>
                         <Neon><Separador /></Neon>
@@ -69,8 +70,11 @@ matheus-costa-magalhães-de-almeida-40714921a
 
                 </div>
             </Container>
-            <Container><Text>sdafasdf</Text></Container>
-            <Container><Text>sdafasdf</Text></Container>
+
+            <Container id="container1">
+                <Projeto nome="Site de Finanças"></Projeto>
+                <Projeto nome="Portifólio"></Projeto>
+            </Container>
         </Dashboard>
     )
 
