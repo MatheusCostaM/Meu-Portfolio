@@ -1,4 +1,4 @@
-export const corPrimaria = "cian";
+export const corPrimaria = "#00cad1";
 
 export const fundoClaro = "white";
 export const luzFundoClaro = "#dcffff";

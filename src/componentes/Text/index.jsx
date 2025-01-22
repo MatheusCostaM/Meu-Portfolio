@@ -22,6 +22,9 @@ export default ({ children, tipoText }) => {
             case "titulo3":
                 return 1;
 
+            case "titulo4":
+                return 0.5;
+
             default:
                 return 1.5;
 
