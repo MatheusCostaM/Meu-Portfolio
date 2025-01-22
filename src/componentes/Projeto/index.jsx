@@ -5,6 +5,7 @@ import Text from '../Text';
 import Vidro from '../Vidro';
 import { Projetos } from '../Dados';
 import Tag from '../Tag';
+import MoveSimple from '../MoveSimple';
 
 const Projeto = styled.div`
 
@@ -13,7 +14,7 @@ justify-content: space-around;
 align-items: center;
 width: 80%;
 margin: 2vw 0 2vw; 
-height: 40vh;
+height: 80vh;
 
 div{
     display: flex;
@@ -36,6 +37,7 @@ export default ({ nome }) => {
     let imagem = "";
     let descricao = "";
     let link = "";
+    let git = "";
 
     for (let i = 0; i < Projetos.length; i++) {
 
@@ -47,6 +49,7 @@ export default ({ nome }) => {
             imagem = Projetos[i].image;
             descricao = Projetos[i].descricao;
             link = Projetos[i].site;
+            git = Projetos[i].git;
             console.log("foi", titulo);
             break;
         }
@@ -62,6 +65,10 @@ export default ({ nome }) => {
                     <div>
                         <Text tipo="titulo2">{titulo}</Text>
                         <a target="_blank" href={link}><Interagible><img src={imagem} /></Interagible></a>
+                        <section>
+                            <MoveSimple><a target="_blank" href={link}><Interagible><Tag tipo="Link" /></Interagible></a></MoveSimple>
+                            <MoveSimple><a target="_blank" href={git}><Interagible><Tag tipo="Github" /></Interagible></a></MoveSimple>
+                        </section>
                     </div>
 
                     <div>
@@ -78,6 +85,5 @@ export default ({ nome }) => {
                 </section>
             </Vidro >
         </Projeto>
-
     )
 }

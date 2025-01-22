@@ -13,6 +13,7 @@ import Python from '../../assets/img/py.svg';
 import ReactJS from '../../assets/img/react.svg';
 import Linkedin from '../../assets/img/linkedin.svg';
 import Github from '../../assets/img/github.svg';
+import Link from '../../assets/img/link.svg';
 
 const Tag = styled.div`
 
@@ -58,6 +59,8 @@ export default ({ tipo }) => {
                 return Linkedin;
             case "Github":
                 return Github;
+            case "Link":
+                return Link;
         }
     }
 

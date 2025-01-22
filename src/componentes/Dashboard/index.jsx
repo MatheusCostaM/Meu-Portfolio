@@ -6,6 +6,7 @@ import Tag from '../Tag';
 import foto from '../../assets/img/foto.svg';
 import Neon from '../Neon';
 import Projeto from '../Projeto';
+import MoveSimple from '../MoveSimple';
 
 const Dashboard = styled.div`
 
@@ -61,10 +62,8 @@ export default () => {
                         <Foto src={foto} />
                         <Text tipoText="titulo3">Clique nos Links</Text>
                         <div>
-                            <a href="www.linkedin.com/in/
-matheus-costa-magalhães-de-almeida-40714921a
-"><Tag tipo="Linkedin" /></a>
-                            <a href="https://github.com/MatheusCostaM"><Tag tipo="Github" /></a>
+                            <MoveSimple><a target="_blank" href="www.linkedin.com/in/matheus-costa-magalhães-de-almeida-40714921a"><Tag tipo="Linkedin" /></a></MoveSimple>
+                            <MoveSimple><a target="_blank" href="https://github.com/MatheusCostaM"><Tag tipo="Github" /></a></MoveSimple>
                         </div>
                     </section>
 

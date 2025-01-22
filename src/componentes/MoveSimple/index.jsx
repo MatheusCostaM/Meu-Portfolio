@@ -3,16 +3,12 @@ import styled from "styled-components";
 
 const MoveSimple = styled.div`
 
-/* Posição do children */
-    display: flex;
-    position: absolute;
-    
 & > * {
     /* transição para a escala */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 
     /* Mudança de escala */
-    transform: scale(${({ isMove }) => (isMove ? 1 : 0.95)});
+    transform: scale(${({ isMove }) => (isMove ? 1 : 1.1)});
 }
 `
 
@@ -32,7 +28,7 @@ export default ({ children }) => {
                 newIsMove = true;
             }
             setMove(newIsMove);
-        }, 2000)
+        }, 1000)
 
         return () => clearInterval(interval);
     });
