@@ -24,9 +24,9 @@ export default () => {
         <MenuLateral>
             <Vidro $bordaCurva="20px">
                 <Menu $posicao="vertical">
-                    <>Apresentação</>
-                    <>Projetos</>
-                    <>Contato</>
+                    <Text>Apresentação</Text>
+                    <Text>Projetos</Text>
+                    <Text>Contato</Text>
                 </Menu>
             </Vidro>
         </MenuLateral >

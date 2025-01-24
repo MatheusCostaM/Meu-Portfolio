@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import Interagible from '../Interagible';
 import Vidro from '../Vidro';
-import Text from '../Text';
 import { Tags } from '../Dados';
 
 

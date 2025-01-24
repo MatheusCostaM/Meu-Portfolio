@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import Vidro from '../Vidro'
 import Menu from '../Menu'
-import Interagible from '../Interagible'
 import Text from '../Text';
 import Tema from '../Tema';
 import Lingua from '../Lingua';

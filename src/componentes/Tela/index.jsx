@@ -131,7 +131,7 @@ export default ({ conteudo }) => {
         }
 
         setNivelAtivo(niveis);
-        console.log(niveis);
+
 
     }, [conteudo]);
 

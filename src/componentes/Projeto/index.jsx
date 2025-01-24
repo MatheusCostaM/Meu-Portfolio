@@ -14,7 +14,7 @@ justify-content: space-around;
 align-items: center;
 width: 80%;
 margin: 2vw 0 2vw; 
-height: 80vh;
+min-height: 25%;
 
 div{
     display: flex;
@@ -29,6 +29,10 @@ Section{
     align-items: center;
     justify-content: space-around;
 }
+
+img{
+    max-width: 300px;
+}
 `;
 
 export default ({ nome, abrir }) => {
@@ -38,6 +42,7 @@ export default ({ nome, abrir }) => {
     let descricao = "";
     let link = "";
     let git = "";
+    let tecnologias = [];
 
     for (let i = 0; i < Projetos.length; i++) {
 
@@ -47,10 +52,10 @@ export default ({ nome, abrir }) => {
             descricao = Projetos[i].descricao;
             link = Projetos[i].site;
             git = Projetos[i].git;
+            tecnologias = Projetos[i].tecnologias;
 
             break;
         }
-
 
     }
 
@@ -60,7 +65,7 @@ export default ({ nome, abrir }) => {
             <Vidro $bordaCurva={"25px"}>
                 <section>
                     <div>
-                        <Text tipo="titulo2">{titulo}</Text>
+                        <Text tipoText="titulo2">{titulo}</Text>
                         <a target="_blank" href={link}><Interagible><img src={imagem} /></Interagible></a>
                         <section>
                             <MoveSimple><a target="_blank" href={link}><Interagible><Tag tipo="Link" /></Interagible></a></MoveSimple>
@@ -69,14 +74,15 @@ export default ({ nome, abrir }) => {
                     </div>
 
                     <div>
-                        <Text tipo="titulo3">{descricao}</Text>
-                        <Text tipo="titulo3">Tecnologias utilizadas nesse projeto.</Text>
+                        <Text tipoText="titulo3">{descricao}</Text>
+                        <Text tipoText="titulo3">Tecnologias utilizadas nesse projeto.</Text>
                         <section>
-                            <Tag abrir={abrir} tipo="Php" />
-                            <Tag abrir={abrir} tipo="MySql" />
-                            <Tag abrir={abrir} tipo="Bootstrap" />
-                            <Tag abrir={abrir} tipo="Css" />
-                            <Tag abrir={abrir} tipo="Html" />
+                            {tecnologias.map((tecno, index) => (
+                                <Tag key={index} tipo={tecno} abrir={abrir} />
+                            )
+
+
+                            )}
                         </section>
                     </div>
                 </section>

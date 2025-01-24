@@ -9,10 +9,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    display: flex;
-    height: 100vh;
+    
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(270deg, ${({ theme }) => theme.luz} 25%, ${({ theme }) => theme.body} 75%);
+    
+  }
+
+  main{
+    display: flex;
+    height: 100vh;
     flex-wrap: wrap;
     justify-content: end;
     z-index: 1;

@@ -31,8 +31,9 @@ export const Tags = [
 ];
 
 
-import financasImg from "../../assets/img/alura.svg";
-import portifolioImg from "../../assets/img/fatec.svg";
+import financasImg from "../../assets/img/finance.png";
+import portifolioImg from "../../assets/img/Portifolio.png";
+
 
 export const Projetos = [
     {
@@ -41,6 +42,7 @@ export const Projetos = [
         site: "http://financemylife.byethost13.com/",
         image: financasImg,
         git: "https://github.com/MatheusCostaM/FinanceMyLife",
+        tecnologias: ["JavaScript", "Css", "Html", "Php", "MySql"],
     },
 
     {
@@ -49,5 +51,63 @@ export const Projetos = [
         site: "http://localhost:5173/",
         image: portifolioImg,
         git: "https://github.com/MatheusCostaM/MeuCV",
+        tecnologias: ["React", "Node", "Bootstrap", "JavaScript", "Css", "Html"],
     },
-]; 
+];
+
+import fatec from "../../assets/img/fatec.svg";
+import alura from "../../assets/img/alura.svg";
+import senai from "../../assets/img/senai.svg";
+import senac from "../../assets/img/senac.svg";
+
+export const Formacoes = [
+    {
+        curso: "Informática para Negócios",
+        tipo: "Tecnólogo",
+        imagem: fatec,
+        unidade: "FATEC SBC",
+        dataIni: "07/2022",
+        dataFim: "06/2025",
+    },
+    {
+        curso: "Python - Formação completa",
+        tipo: "Curso",
+        imagem: alura,
+        unidade: "Alura",
+        dataIni: "Indefinido",
+        dataFim: "Indefinido",
+    },
+    {
+        curso: "PHP",
+        tipo: "Curso",
+        imagem: alura,
+        unidade: "Alura",
+        dataIni: "Indefinido",
+        dataFim: "Indefinido",
+    },
+    {
+        curso: "JavaScript",
+        tipo: "Curso",
+        imagem: alura,
+        unidade: "Alura",
+        dataIni: "Indefinido",
+        dataFim: "Indefinido",
+    },
+    {
+        curso: "Web Designer - Frontend",
+        tipo: "Curso",
+        imagem: senai,
+        unidade: "SENAI - Almirante Tamandaré",
+        dataIni: "2022",
+        dataFim: "2022",
+    },
+    {
+        curso: "Lógica de Programação",
+        tipo: "Curso",
+        imagem: senac,
+        unidade: "SENAC SBC",
+        dataIni: "2020",
+        dataFim: "2020",
+    }
+];
+

@@ -39,7 +39,7 @@ export default ({ children, $posicao }) => {
         <Menu $posicao={$posicao}>
             {children.map((item, index) => (
                 <ItemMenu
-                    id={index}
+                    key={index}
                     isAtual={atualItem === index}
                     onClick={() => {
                         trocaAtual(index)

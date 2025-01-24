@@ -34,12 +34,12 @@ function App() {
       <ThemeProvider theme={tema}>
         <GlobalStyle />
         <Background />
-        <body>
+        <main>
           <Tela conteudo={tela} />
           <Navbar TrocaTema={TrocaTema} abrir={abrir} />
           <MenuLateral />
           <Dashboard abrir={abrir} />
-        </body>
+        </main>
       </ThemeProvider>
 
     </>
