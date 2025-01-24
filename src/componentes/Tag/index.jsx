@@ -10,6 +10,7 @@ const Tag = styled.div`
 
 height: 8vh;
 width: 8vh;
+margin: 0 1vh 0;
 object-fit: contain;
 border-radius: 20%;
 
@@ -21,13 +22,13 @@ img {
 
 `;
 
-export default ({ tipo }) => {
+export default ({ tipo, abrir }) => {
 
     const qualTipo = (tipo) => {
 
         for (let i = 0; i < Tags.length; i++) {
             if (Tags[i].nome === tipo) {
-                return { nome: Tags[i].nome, image: Tags[i].image };
+                return { nome: Tags[i].nome, image: Tags[i].image, descricao: Tags[i].descricao, nivel: Tags[i].nivel };
             }
         }
 
@@ -35,11 +36,15 @@ export default ({ tipo }) => {
 
     let conteudoTag = qualTipo(tipo);
 
+    const isAbrir = () => {
+        abrir(conteudoTag);
+    }
+
 
     return (
         <Interagible>
 
-            <Tag>
+            <Tag onClick={isAbrir}>
 
                 <Vidro $bordaCurva="20%">
 

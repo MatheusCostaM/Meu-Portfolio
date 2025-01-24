@@ -28,7 +28,7 @@ img {
 
 export default ({ TrocaTema }) => {
 
-    const [tema, setTema] = useState({ img: sun, text: "Modo Claro" });
+    const [tema, setTema] = useState({ img: moon, text: "Modo Escuro" });
 
     function isTrocaTema() {
         if (tema.img === sun) {

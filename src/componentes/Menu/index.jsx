@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styled, { ThemeConsumer } from "styled-components";
+import Interagible from '../Interagible';
 import Text from '../Text';
+
 
 const Menu = styled.div`
 
@@ -21,7 +23,7 @@ const Item = styled.a`
 
 const ItemMenu = ({ children, onClick, isAtual }) => {
     return (
-        <Item onClick={onClick} $isAtual={isAtual}><Text tipoText="titulo3">{children}</Text></Item>
+        <Item onClick={onClick} $isAtual={isAtual}><Interagible>{children}</Interagible></Item>
     );
 }
 
@@ -39,7 +41,12 @@ export default ({ children, $posicao }) => {
                 <ItemMenu
                     id={index}
                     isAtual={atualItem === index}
-                    onClick={() => trocaAtual(index)}
+                    onClick={() => {
+                        trocaAtual(index)
+                        if (item.props.evento) {
+                            item.props.evento();
+                        }
+                    }}
                 >
                     {item}
                 </ItemMenu>

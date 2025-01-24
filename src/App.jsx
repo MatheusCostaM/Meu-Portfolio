@@ -6,11 +6,20 @@ import { temaClaro, temaEscuro } from './componentes/UI/temas';
 import MenuLateral from './componentes/MenuLateral';
 import Background from './componentes/Background';
 import Dashboard from './componentes/Dashboard';
+import Tela from './componentes/Tela';
 
 
 function App() {
 
   const [tema, setTema] = useState(temaClaro);
+
+  const [tela, setTela] = useState({});
+
+  const abrir = (conteudo) => {
+
+    setTela(conteudo);
+
+  };
 
   function TrocaTema(text) {
     if (text === "Modo Claro") {
@@ -25,11 +34,12 @@ function App() {
       <ThemeProvider theme={tema}>
         <GlobalStyle />
         <Background />
-        <main>
-          <Navbar TrocaTema={TrocaTema} />
+        <body>
+          <Tela conteudo={tela} />
+          <Navbar TrocaTema={TrocaTema} abrir={abrir} />
           <MenuLateral />
-          <Dashboard />
-        </main>
+          <Dashboard abrir={abrir} />
+        </body>
       </ThemeProvider>
 
     </>

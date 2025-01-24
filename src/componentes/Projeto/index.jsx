@@ -31,7 +31,7 @@ Section{
 }
 `;
 
-export default ({ nome }) => {
+export default ({ nome, abrir }) => {
 
     let titulo = "";
     let imagem = "";
@@ -72,11 +72,11 @@ export default ({ nome }) => {
                         <Text tipo="titulo3">{descricao}</Text>
                         <Text tipo="titulo3">Tecnologias utilizadas nesse projeto.</Text>
                         <section>
-                            <Tag tipo="Php" />
-                            <Tag tipo="MySql" />
-                            <Tag tipo="Bootstrap" />
-                            <Tag tipo="Css" />
-                            <Tag tipo="Html" />
+                            <Tag abrir={abrir} tipo="Php" />
+                            <Tag abrir={abrir} tipo="MySql" />
+                            <Tag abrir={abrir} tipo="Bootstrap" />
+                            <Tag abrir={abrir} tipo="Css" />
+                            <Tag abrir={abrir} tipo="Html" />
                         </section>
                     </div>
                 </section>

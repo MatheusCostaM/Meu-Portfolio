@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  main {
+  body {
     display: flex;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
@@ -17,4 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: end;
     z-index: 1;
   }
+
+  a{
+    text-decoration: none; 
+  color: inherit; 
+  cursor: pointer;
+}
 `;

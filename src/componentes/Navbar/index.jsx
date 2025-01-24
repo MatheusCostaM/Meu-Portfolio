@@ -6,6 +6,7 @@ import Interagible from '../Interagible'
 import Text from '../Text';
 import Tema from '../Tema';
 import Lingua from '../Lingua';
+import Pdf from '/curriculo.pdf';
 
 const Navbar = styled.div`
 
@@ -18,22 +19,21 @@ z-index: 2;
 
 `
 
-export default ({ TrocaTema }) => {
+export default ({ TrocaTema, abrir }) => {
+
+    const abrirPdf = () => {
+        abrir({ nome: "PDF", pdf: Pdf });
+    }
+
     return (
 
         <Navbar>
             <Vidro>
                 <Tema TrocaTema={TrocaTema} />
                 <Menu $posicao="horizontal">
-                    <Interagible>
-                        <Text>CONTATO</Text>
-                    </Interagible>
-                    <Interagible>
-                        <Text>SOBRE</Text>
-                    </Interagible>
-                    <Interagible>
-                        <Text>CURRICULO</Text>
-                    </Interagible>
+                    <Text>CONTATO</Text>
+                    <Text>SOBRE</Text>
+                    <Text evento={abrirPdf}>CURRICULO</Text>
                 </Menu>
                 <Lingua />
             </Vidro>

@@ -34,11 +34,11 @@ margin: 1vh;
 
 `;
 
-export default () => {
+export default ({ abrir }) => {
 
     return (
         <Dashboard>
-            <Container id="container1">
+            <Container>
                 <div>
                     <section>
                         <Neon><Separador /></Neon>
@@ -47,15 +47,16 @@ export default () => {
                         <Text tipoText="titulo3">Transforme seu projeto em realidade com soluções <br /> Full Stack de qualidade.</Text>
                         <Neon><Separador /></Neon>
                         <Text>Tecnologias que domino.</Text>
-                        <div><Tag tipo="JavaScript" />
-                            <Tag tipo="Node" />
-                            <Tag tipo="React" />
-                            <Tag tipo="Python" />
-                            <Tag tipo="Php" />
-                            <Tag tipo="MySql" />
-                            <Tag tipo="Bootstrap" />
-                            <Tag tipo="Css" />
-                            <Tag tipo="Html" />
+                        <div>
+                            <Tag abrir={abrir} tipo="JavaScript" />
+                            <Tag abrir={abrir} tipo="Node" />
+                            <Tag abrir={abrir} tipo="React" />
+                            <Tag abrir={abrir} tipo="Python" />
+                            <Tag abrir={abrir} tipo="Php" />
+                            <Tag abrir={abrir} tipo="MySql" />
+                            <Tag abrir={abrir} tipo="Bootstrap" />
+                            <Tag abrir={abrir} tipo="Css" />
+                            <Tag abrir={abrir} tipo="Html" />
                         </div>
                     </section>
                     <section>
@@ -70,9 +71,19 @@ export default () => {
                 </div>
             </Container>
 
-            <Container id="container1">
-                <Projeto nome="Site de Finanças"></Projeto>
-                <Projeto nome="Portifólio"></Projeto>
+            <Container>
+                <Projeto nome="Site de Finanças" abrir={abrir}></Projeto>
+                <Projeto nome="Portifólio" abrir={abrir}></Projeto>
+            </Container>
+            <Container>
+                <Text>Entre em Contato e Vamos Trabalhar Juntos</Text>
+                <div>
+                    <MoveSimple>
+                        <Tag tipo="Whatsapp" />
+                        <Tag tipo="Email" />
+                    </MoveSimple>
+                </div>
+
             </Container>
         </Dashboard>
     )
