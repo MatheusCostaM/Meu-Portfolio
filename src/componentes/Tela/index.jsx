@@ -95,7 +95,7 @@ justify-content: flex-start;
 flex-wrap: wrap;
 
 img {
-    max-width: 50px;
+    max-width: 25px;
   }
 
 `;

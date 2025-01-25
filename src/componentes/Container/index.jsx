@@ -28,11 +28,13 @@ section {
 
 `;
 
-export default ({ children }) => {
+export default ({ children, id }) => {
 
     return (
         <Container>
-            {children}
+            <section id={id}>
+                {children}
+            </section>
         </Container>
     );
 

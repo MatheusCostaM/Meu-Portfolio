@@ -18,15 +18,15 @@ top: 50%;
 
 `
 
-export default () => {
+export default ({ scroll }) => {
 
     return (
         <MenuLateral>
-            <Vidro $bordaCurva="20px">
+            <Vidro $bordaCurva="20px" $blur={3}>
                 <Menu $posicao="vertical">
-                    <Text>Apresentação</Text>
-                    <Text>Projetos</Text>
-                    <Text>Contato</Text>
+                    <Text evento={() => scroll("apresentacao", "center")}>Apresentação</Text>
+                    <Text evento={() => scroll("projetos", "start")}>Projetos</Text>
+                    <Text evento={() => scroll("contato", "center")}>Contato</Text>
                 </Menu>
             </Vidro>
         </MenuLateral >

@@ -10,8 +10,8 @@ const Vidro = styled.div`
     /* Estilo de espelho */
     background-color: white;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(${(props) => (props.$blur !== undefined ? props.$blur : 10)}px);
+    -webkit-backdrop-filter: blur(${(props) => (props.$blur !== undefined ? props.$blur : 10)}px);
     box-shadow: 0px 0px 5px 3px #00cad1;
     
     border: 1px solid rgba(0, 255, 255, 0.18);
@@ -22,9 +22,9 @@ const Vidro = styled.div`
     border-radius: ${({ $bordaCurva }) => $bordaCurva || '0px'};
 `;
 
-export default ({ children, $bordaCurva }) => {
+export default ({ children, $bordaCurva, $blur }) => {
     return (
-        <Vidro $bordaCurva={$bordaCurva}>
+        <Vidro $bordaCurva={$bordaCurva} $blur={$blur}>
             {children}
         </Vidro>
     );

@@ -65,7 +65,7 @@ export default ({ abrir }) => {
 
     return (
         <Dashboard>
-            <Container>
+            <Container id="apresentacao">
                 <div>
                     <section>
                         <Neon><Separador /></Neon>
@@ -98,12 +98,12 @@ export default ({ abrir }) => {
                 </div>
             </Container>
 
-            <Container>
+            <Container id="projetos">
                 {Projetos.map((projeto, index) => (
                     <Projeto nome={projeto.nome} key={index} abrir={abrir}></Projeto>
                 ))}
             </Container>
-            <Container>
+            <Container id="contato">
                 <Text>Entre em Contato e Vamos Trabalhar Juntos</Text>
                 <div>
                     <MoveSimple>
@@ -113,8 +113,9 @@ export default ({ abrir }) => {
                 </div>
 
             </Container>
-            <Container>
+            <Container >
                 <Text tipoText="titulo2">SOBRE MIM</Text>
+                <div id="sobre"></div>
                 <CaixaText>
                     <Text tipoText="titulo3">
                         Atualmente atuo na área administrativa de uma escola da Prefeitura de São

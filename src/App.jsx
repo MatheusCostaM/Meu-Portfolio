@@ -21,13 +21,17 @@ function App() {
 
   };
 
-  function TrocaTema(text) {
+  const TrocaTema = (text) => {
     if (text === "Modo Claro") {
       setTema(temaClaro);
     } else {
       setTema(temaEscuro);
     }
   }
+
+  const scroll = (id, centro) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth", block: centro });
+  };
 
   return (
     <>
@@ -36,8 +40,8 @@ function App() {
         <Background />
         <main>
           <Tela conteudo={tela} />
-          <Navbar TrocaTema={TrocaTema} abrir={abrir} />
-          <MenuLateral />
+          <Navbar TrocaTema={TrocaTema} abrir={abrir} scroll={scroll} />
+          <MenuLateral scroll={scroll} />
           <Dashboard abrir={abrir} />
         </main>
       </ThemeProvider>
