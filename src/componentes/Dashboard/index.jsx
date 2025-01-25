@@ -16,7 +16,20 @@ width:82vw;
 height: auto;
 z-index: 1;
 
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+
 `
+
 
 const Foto = styled.img`
 
@@ -61,85 +74,107 @@ width:70%;
 
 `
 
+const Animador = styled.div`
+
+width: 100%;
+
+animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+
+`
+
 export default ({ abrir }) => {
 
     return (
         <Dashboard>
-            <Container id="apresentacao">
-                <div>
-                    <section>
-                        <Neon><Separador /></Neon>
-                        <Text tipoText="titulo1">MATHEUS COSTA</Text>
-                        <Text tipoText="titulo2">Desenvolvedor Full-Stack</Text>
-                        <Text tipoText="titulo3">Transforme seu projeto em realidade com soluções <br /> Full Stack de qualidade.</Text>
-                        <Neon><Separador /></Neon>
-                        <Text>Tecnologias que domino.</Text>
-                        <div>
-                            <Tag abrir={abrir} tipo="JavaScript" />
-                            <Tag abrir={abrir} tipo="Node" />
-                            <Tag abrir={abrir} tipo="React" />
-                            <Tag abrir={abrir} tipo="Python" />
-                            <Tag abrir={abrir} tipo="Php" />
-                            <Tag abrir={abrir} tipo="MySql" />
-                            <Tag abrir={abrir} tipo="Bootstrap" />
-                            <Tag abrir={abrir} tipo="Css" />
-                            <Tag abrir={abrir} tipo="Html" />
-                        </div>
-                    </section>
-                    <section>
-                        <Foto src={foto} />
-                        <Text tipoText="titulo3">Clique nos Links</Text>
-                        <div>
-                            <MoveSimple><a target="_blank" href="https://linkedin.com/in/matheus-costa-magalhães-de-almeida-40714921a"><Tag tipo="Linkedin" /></a></MoveSimple>
-                            <MoveSimple><a target="_blank" href="https://github.com/MatheusCostaM"><Tag tipo="Github" /></a></MoveSimple>
-                        </div>
-                    </section>
+            <Animador>
+                <Container id="apresentacao">
+                    <div>
+                        <section>
+                            <Neon><Separador /></Neon>
+                            <Text tipoText="titulo1">MATHEUS COSTA</Text>
+                            <Text tipoText="titulo2">Desenvolvedor Full-Stack</Text>
+                            <Text tipoText="titulo3">Transforme seu projeto em realidade com soluções <br /> Full Stack de qualidade.</Text>
+                            <Neon><Separador /></Neon>
+                            <Text>Tecnologias que domino.</Text>
+                            <div>
+                                <Tag abrir={abrir} tipo="JavaScript" />
+                                <Tag abrir={abrir} tipo="Node" />
+                                <Tag abrir={abrir} tipo="React" />
+                                <Tag abrir={abrir} tipo="Python" />
+                                <Tag abrir={abrir} tipo="Php" />
+                                <Tag abrir={abrir} tipo="MySql" />
+                                <Tag abrir={abrir} tipo="Bootstrap" />
+                                <Tag abrir={abrir} tipo="Css" />
+                                <Tag abrir={abrir} tipo="Html" />
+                            </div>
+                        </section>
+                        <section>
+                            <Foto src={foto} />
+                            <Text tipoText="titulo3">Clique nos Links</Text>
+                            <div>
+                                <MoveSimple><a target="_blank" href="https://linkedin.com/in/matheus-costa-magalhães-de-almeida-40714921a"><Tag tipo="Linkedin" /></a></MoveSimple>
+                                <MoveSimple><a target="_blank" href="https://github.com/MatheusCostaM"><Tag tipo="Github" /></a></MoveSimple>
+                            </div>
+                        </section>
 
-                </div>
-            </Container>
+                    </div>
+                </Container>
+            </Animador>
 
             <Container id="projetos">
                 {Projetos.map((projeto, index) => (
-                    <Projeto nome={projeto.nome} key={index} abrir={abrir}></Projeto>
+                    <Animador>
+                        <Projeto nome={projeto.nome} key={index} abrir={abrir}></Projeto>
+                    </Animador>
                 ))}
             </Container>
-            <Container id="contato">
-                <Text>Entre em Contato e Vamos Trabalhar Juntos</Text>
-                <div>
-                    <MoveSimple>
-                        <Tag tipo="Whatsapp" />
-                        <Tag tipo="Email" />
-                    </MoveSimple>
-                </div>
+            <Animador>
+                <Container id="contato">
+                    <Text>Entre em Contato e Vamos Trabalhar Juntos</Text>
+                    <div>
+                        <MoveSimple>
+                            <Tag tipo="Whatsapp" />
+                            <Tag tipo="Email" />
+                        </MoveSimple>
+                    </div>
 
-            </Container>
+                </Container>
+            </Animador>
             <Container >
-                <Text tipoText="titulo2">SOBRE MIM</Text>
-                <div id="sobre"></div>
-                <CaixaText>
-                    <Text tipoText="titulo3">
-                        Atualmente atuo na área administrativa de uma escola da Prefeitura de São
-                        Bernardo do Campo. Estou em transição de carreira para a área de
-                        tecnologia, um campo pelo qual tenho grande interesse. Além do
-                        conhecimento adquirido na faculdade e em cursos especializados, estudo de
-                        forma autodidata.
-                    </Text>
-                </CaixaText>
-                <Text>Formação Acadêmica</Text>
+                <Animador>
+                    <section>
+                        <Text tipoText="titulo2">SOBRE MIM</Text>
+                        <div id="sobre"></div>
+                        <CaixaText>
+                            <Text tipoText="titulo3">
+                                Atualmente atuo na área administrativa de uma escola da Prefeitura de São
+                                Bernardo do Campo. Estou em transição de carreira para a área de
+                                tecnologia, um campo pelo qual tenho grande interesse. Além do
+                                conhecimento adquirido na faculdade e em cursos especializados, estudo de
+                                forma autodidata.
+                            </Text>
+                        </CaixaText>
+                        <Text>Formação Acadêmica</Text>
+                    </section>
+                </Animador>
+
                 {Formacoes.map((formacoes, index) => (
-                    <Formacao key={index}>
-                        <Vidro $bordaCurva={"20px"}>
-                            <img src={formacoes.imagem} />
-                            <section>
-                                <Text tipoText="titulo3">{formacoes.unidade}</Text>
-                                <Text tipoText="titulo3">{formacoes.tipo} - {formacoes.curso}</Text>
-                                <Text tipoText="titulo3">Data de início: {formacoes.dataIni}</Text>
-                                <Text tipoText="titulo3">Data de conclusão: {formacoes.dataFim}</Text>
-                            </section>
-                        </Vidro>
+                    <Animador>
+                        <Formacao key={index}>
+                            <Vidro $bordaCurva={"20px"}>
+                                <img src={formacoes.imagem} />
+                                <section>
+                                    <Text tipoText="titulo3">{formacoes.unidade}</Text>
+                                    <Text tipoText="titulo3">{formacoes.tipo} - {formacoes.curso}</Text>
+                                    <Text tipoText="titulo3">Data de início: {formacoes.dataIni}</Text>
+                                    <Text tipoText="titulo3">Data de conclusão: {formacoes.dataFim}</Text>
+                                </section>
+                            </Vidro>
 
-                    </Formacao >
-
+                        </Formacao >
+                    </Animador>
                 ))}
 
             </Container>
