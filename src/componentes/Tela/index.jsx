@@ -102,7 +102,7 @@ img {
 
 
 
-export default ({ conteudo }) => {
+export default ({ conteudo, translate }) => {
 
     const [tela, setTela] = useState(
         { conteudo: {}, visivel: false }
@@ -163,7 +163,7 @@ export default ({ conteudo }) => {
                         </Top>
                         <Container>
                             <section>
-                                <Text tipoText="titulo3">{tela.conteudo.descricao}</Text>
+                                <Text tipoText="titulo3">{translate(tela.conteudo.descricao)}</Text>
                             </section>
                             <section>
                                 <div>
@@ -171,11 +171,11 @@ export default ({ conteudo }) => {
                                         {(() => {
                                             switch (tela.conteudo.nivel) {
                                                 case 1:
-                                                    return "Básico";
+                                                    return translate("Básico");
                                                 case 2:
-                                                    return "Intermediário";
+                                                    return translate("Intermediário");
                                                 case 3:
-                                                    return "Avançado";
+                                                    return translate("Avançado");
                                                 default:
                                                     return "";
                                             }

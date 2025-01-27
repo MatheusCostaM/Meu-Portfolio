@@ -8,7 +8,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
-min-height: 100vh;
+min-height: 110vh;
 flex-direction: column;
 text-align: center;
 

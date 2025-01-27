@@ -27,15 +27,17 @@ img {
 
 `
 
-export default () => {
+export default ({ trocaLingua }) => {
 
-    const [lingua, setTema] = useState({ img: brazil, text: "Português Brasileiro" });
+    const [lingua, setTema] = useState({ img: brazil, text: "Português" });
 
     function isTrocaLingua() {
         if (lingua.img === brazil) {
-            setTema({ img: usa, text: "Inglês" });
+            setTema({ img: usa, text: "English" });
+            trocaLingua('en');
         } else {
-            setTema({ img: brazil, text: "Português Brasileiro" });
+            setTema({ img: brazil, text: "Português" });
+            trocaLingua('pt');
         }
     }
 

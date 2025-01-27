@@ -8,12 +8,20 @@ import Background from './componentes/Background';
 import Dashboard from './componentes/Dashboard';
 import Tela from './componentes/Tela';
 
+import { useTranslation } from 'react-i18next';
+import "./i18n/i18n";
 
-function App() {
+const App = () => {
+
+  const { t, i18n } = useTranslation();
 
   const [tema, setTema] = useState(temaClaro);
 
   const [tela, setTela] = useState({});
+
+  const trocaLingua = (lng) => {
+    i18n.changeLanguage(lng);
+  }
 
   const abrir = (conteudo) => {
 
@@ -22,15 +30,15 @@ function App() {
   };
 
   const TrocaTema = (text) => {
-    if (text === "Modo Claro") {
+    if (text === "Modo Claro" || text === "Light Mode") {
       setTema(temaClaro);
     } else {
       setTema(temaEscuro);
     }
   }
 
-  const scroll = (id, centro) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth", block: centro });
+  const scroll = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   return (
@@ -39,10 +47,10 @@ function App() {
         <GlobalStyle />
         <Background />
         <main>
-          <Tela conteudo={tela} />
-          <Navbar TrocaTema={TrocaTema} abrir={abrir} scroll={scroll} />
-          <MenuLateral scroll={scroll} />
-          <Dashboard abrir={abrir} />
+          <Tela conteudo={tela} translate={t} />
+          <Navbar TrocaTema={TrocaTema} abrir={abrir} scroll={scroll} trocaLingua={trocaLingua} translate={t} />
+          <MenuLateral scroll={scroll} translate={t} />
+          <Dashboard abrir={abrir} translate={t} />
         </main>
       </ThemeProvider>
 

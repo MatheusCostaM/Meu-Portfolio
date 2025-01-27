@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from "styled-components";
 import Text from '../Text';
 import Interagible from '../Interagible';
@@ -26,18 +26,25 @@ img {
 
 `
 
-export default ({ TrocaTema }) => {
+export default ({ TrocaTema, translate }) => {
 
-    const [tema, setTema] = useState({ img: moon, text: "Modo Escuro" });
+    const [tema, setTema] = useState({ img: moon, text: translate("Modo Escuro") });
 
     function isTrocaTema() {
         if (tema.img === sun) {
-            setTema({ img: moon, text: "Modo Escuro" });
+            setTema({ img: moon, text: translate("Modo Escuro") });
         } else {
-            setTema({ img: sun, text: "Modo Claro" });
+            setTema({ img: sun, text: translate("Modo Claro") });
         }
         TrocaTema(tema.text);
     }
+
+    useEffect(() => {
+        setTema({
+            img: tema.img === sun ? sun : moon,
+            text: translate(tema.img === sun ? "Modo Claro" : "Modo Escuro"),
+        });
+    }, [translate]);
 
     return (
         <Interagible>

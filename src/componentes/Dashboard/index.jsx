@@ -10,6 +10,8 @@ import MoveSimple from '../MoveSimple';
 import Vidro from '../Vidro';
 import { Projetos, Formacoes } from '../Dados';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Dashboard = styled.div`
 
 width:82vw;
@@ -19,7 +21,7 @@ z-index: 1;
 @keyframes appear {
     from{
         opacity: 0;
-        transform: translateY(300px);
+        transform: translateY(600px);
     }
     to {
         opacity: 1;
@@ -84,7 +86,7 @@ animation: appear linear;
 
 `
 
-export default ({ abrir }) => {
+export default ({ abrir, translate }) => {
 
     return (
         <Dashboard>
@@ -94,10 +96,10 @@ export default ({ abrir }) => {
                         <section>
                             <Neon><Separador /></Neon>
                             <Text tipoText="titulo1">MATHEUS COSTA</Text>
-                            <Text tipoText="titulo2">Desenvolvedor Full-Stack</Text>
-                            <Text tipoText="titulo3">Transforme seu projeto em realidade com soluções <br /> Full Stack de qualidade.</Text>
+                            <Text tipoText="titulo2">{translate("Desenvolvedor Full-Stack")}</Text>
+                            <Text tipoText="titulo3">{translate("Transforme seu projeto em realidade com soluções")}<br /> Full Stack de qualidade.</Text>
                             <Neon><Separador /></Neon>
-                            <Text>Tecnologias que domino.</Text>
+                            <Text>{translate("Tecnologias que domino.")}</Text>
                             <div>
                                 <Tag abrir={abrir} tipo="JavaScript" />
                                 <Tag abrir={abrir} tipo="Node" />
@@ -112,7 +114,7 @@ export default ({ abrir }) => {
                         </section>
                         <section>
                             <Foto src={foto} />
-                            <Text tipoText="titulo3">Clique nos Links</Text>
+                            <Text tipoText="titulo3">{translate("Clique nos Links")}</Text>
                             <div>
                                 <MoveSimple><a target="_blank" href="https://linkedin.com/in/matheus-costa-magalhães-de-almeida-40714921a"><Tag tipo="Linkedin" /></a></MoveSimple>
                                 <MoveSimple><a target="_blank" href="https://github.com/MatheusCostaM"><Tag tipo="Github" /></a></MoveSimple>
@@ -123,16 +125,27 @@ export default ({ abrir }) => {
                 </Container>
             </Animador>
 
-            <Container id="projetos">
-                {Projetos.map((projeto, index) => (
-                    <Animador>
-                        <Projeto nome={projeto.nome} key={index} abrir={abrir}></Projeto>
-                    </Animador>
-                ))}
+            <Container>
+                {Projetos.map((projeto, index) => {
+                    if (index === 0) {
+                        return (
+                            <Animador key={index}>
+                                <Projeto nome={projeto.nome} abrir={abrir} id="projetos" translate={translate} />
+                            </Animador>
+                        );
+                    } else {
+                        return (
+                            <Animador key={index}>
+                                <Projeto nome={projeto.nome} abrir={abrir} translate={translate} />
+                            </Animador>
+                        );
+                    }
+                })}
+
             </Container>
             <Animador>
                 <Container id="contato">
-                    <Text>Entre em Contato e Vamos Trabalhar Juntos</Text>
+                    <Text>{translate("Entre em Contato e Vamos Trabalhar Juntos")}</Text>
                     <div>
                         <MoveSimple>
                             <Tag tipo="Whatsapp" />
@@ -145,18 +158,13 @@ export default ({ abrir }) => {
             <Container >
                 <Animador>
                     <section>
-                        <Text tipoText="titulo2">SOBRE MIM</Text>
+                        <Text tipoText="titulo2">{translate("SOBRE MIM")}</Text>
                         <div id="sobre"></div>
                         <CaixaText>
-                            <Text tipoText="titulo3">
-                                Atualmente atuo na área administrativa de uma escola da Prefeitura de São
-                                Bernardo do Campo. Estou em transição de carreira para a área de
-                                tecnologia, um campo pelo qual tenho grande interesse. Além do
-                                conhecimento adquirido na faculdade e em cursos especializados, estudo de
-                                forma autodidata.
+                            <Text tipoText="titulo3">{translate("Atualmente atuo na área administrativa de uma escola da Prefeitura de São Bernardo do Campo. Estou em transição de carreira para a área de tecnologia, um campo pelo qual tenho grande interesse. Além do conhecimento adquirido na faculdade e em cursos especializados, estudo de forma autodidata.")}
                             </Text>
                         </CaixaText>
-                        <Text>Formação Acadêmica</Text>
+                        <Text>{translate("Formação Acadêmica")}</Text>
                     </section>
                 </Animador>
 
@@ -167,9 +175,9 @@ export default ({ abrir }) => {
                                 <img src={formacoes.imagem} />
                                 <section>
                                     <Text tipoText="titulo3">{formacoes.unidade}</Text>
-                                    <Text tipoText="titulo3">{formacoes.tipo} - {formacoes.curso}</Text>
-                                    <Text tipoText="titulo3">Data de início: {formacoes.dataIni}</Text>
-                                    <Text tipoText="titulo3">Data de conclusão: {formacoes.dataFim}</Text>
+                                    <Text tipoText="titulo3">{translate(formacoes.tipo)} - {translate(formacoes.curso)}</Text>
+                                    <Text tipoText="titulo3">{translate("Data de início: ")}{formacoes.dataIni}</Text>
+                                    <Text tipoText="titulo3">{translate("Data de conclusão: ")}{formacoes.dataFim}</Text>
                                 </section>
                             </Vidro>
 
@@ -178,7 +186,8 @@ export default ({ abrir }) => {
                 ))}
 
             </Container>
-        </Dashboard>
+            <Container />
+        </Dashboard >
     )
 
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { ThemeConsumer } from "styled-components";
 import Interagible from '../Interagible';
-import Text from '../Text';
+
 
 
 const Menu = styled.div`

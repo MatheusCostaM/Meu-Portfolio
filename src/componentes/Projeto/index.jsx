@@ -35,7 +35,7 @@ img{
 }
 `;
 
-export default ({ nome, abrir }) => {
+export default ({ nome, abrir, id, translate }) => {
 
     let titulo = "";
     let imagem = "";
@@ -63,9 +63,9 @@ export default ({ nome, abrir }) => {
 
         <Projeto>
             <Vidro $bordaCurva={"25px"}>
-                <section>
+                <section id={id}>
                     <div>
-                        <Text tipoText="titulo2">{titulo}</Text>
+                        <Text tipoText="titulo2">{translate(titulo)}</Text>
                         <a target="_blank" href={link}><Interagible><img src={imagem} /></Interagible></a>
                         <section>
                             <MoveSimple><a target="_blank" href={link}><Interagible><Tag tipo="Link" /></Interagible></a></MoveSimple>
@@ -74,8 +74,8 @@ export default ({ nome, abrir }) => {
                     </div>
 
                     <div>
-                        <Text tipoText="titulo3">{descricao}</Text>
-                        <Text tipoText="titulo3">Tecnologias utilizadas nesse projeto.</Text>
+                        <Text tipoText="titulo3">{translate(descricao)}</Text>
+                        <Text tipoText="titulo3">{translate("Tecnologias utilizadas nesse projeto.")}</Text>
                         <section>
                             {tecnologias.map((tecno, index) => (
                                 <Tag key={index} tipo={tecno} abrir={abrir} />

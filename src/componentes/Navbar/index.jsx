@@ -18,7 +18,7 @@ z-index: 2;
 
 `
 
-export default ({ TrocaTema, abrir, scroll }) => {
+export default ({ TrocaTema, abrir, trocaLingua, translate }) => {
 
     const abrirPdf = () => {
         abrir({ nome: "PDF", pdf: Pdf });
@@ -28,13 +28,12 @@ export default ({ TrocaTema, abrir, scroll }) => {
 
         <Navbar>
             <Vidro $blur={3}>
-                <Tema TrocaTema={TrocaTema} />
+                <Tema TrocaTema={TrocaTema} translate={translate} />
                 <Menu $posicao="horizontal">
-                    <Text evento={() => scroll("contato", "center")}>Contato</Text>
-                    <Text evento={() => scroll("sobre", "center")}>Sobre</Text>
-                    <Text evento={abrirPdf}>CURRICULO</Text>
+                    <></>
+                    <Text evento={abrirPdf}>{translate("CURRICULO")}</Text>
                 </Menu>
-                <Lingua />
+                <Lingua trocaLingua={trocaLingua} />
             </Vidro>
         </Navbar>
     );
