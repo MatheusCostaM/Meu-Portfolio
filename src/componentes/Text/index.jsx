@@ -8,6 +8,10 @@ color: ${({ $tipoText, theme }) =>
         $tipoText === "titulo2" ? theme.corPrincipal : theme.txt};
 margin: 1vh;
 
+@media (max-width: 600px) {
+    
+    font-size: ${({ $tamanhoText }) => ($tamanhoText / 1.5)}rem;
+}
 `
 
 export default ({ children, tipoText }) => {
@@ -25,6 +29,9 @@ export default ({ children, tipoText }) => {
 
             case "titulo4":
                 return 0.5;
+
+            case "titulo5":
+                return 2;
 
             default:
                 return 1.5;

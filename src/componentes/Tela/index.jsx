@@ -24,6 +24,10 @@ section{
     width: 95%;
 }
 
+@media (max-width: 600px) {
+    width: 90vw;
+}
+
 `;
 
 const Top = styled.div`
@@ -60,7 +64,17 @@ div{
 }
 
 section{
-    width:40%;
+    width:40%;    
+}
+
+@media (max-width: 600px) {
+
+    flex-wrap: wrap;
+    text-align: center;
+
+    section{
+        min-width: 80vw;
+    }
 }
 
 `;

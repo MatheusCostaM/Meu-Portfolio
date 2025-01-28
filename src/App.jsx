@@ -19,8 +19,13 @@ const App = () => {
 
   const [tela, setTela] = useState({});
 
+  const [menuLat, setMenuLat] = useState(false);
+
+  const [lngAtual, setLngAtual] = useState("pt");
+
   const trocaLingua = (lng) => {
     i18n.changeLanguage(lng);
+    setLngAtual(lng);
   }
 
   const abrir = (conteudo) => {
@@ -41,6 +46,10 @@ const App = () => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
+  const abrirMenu = () => {
+    menuLat ? setMenuLat(false) : setMenuLat(true);
+  }
+
   return (
     <>
       <ThemeProvider theme={tema}>
@@ -48,8 +57,8 @@ const App = () => {
         <Background />
         <main>
           <Tela conteudo={tela} translate={t} />
-          <Navbar TrocaTema={TrocaTema} abrir={abrir} scroll={scroll} trocaLingua={trocaLingua} translate={t} />
-          <MenuLateral scroll={scroll} translate={t} />
+          <Navbar TrocaTema={TrocaTema} abrir={abrir} scroll={scroll} trocaLingua={trocaLingua} menuLat={menuLat} abrirMenu={abrirMenu} lngAtual={lngAtual} translate={t} />
+          <MenuLateral scroll={scroll} menuLat={menuLat} abrirMenu={abrirMenu} translate={t} />
           <Dashboard abrir={abrir} translate={t} />
         </main>
       </ThemeProvider>

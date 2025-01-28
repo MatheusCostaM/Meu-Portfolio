@@ -21,7 +21,7 @@ width: 30vw;
 
 img {
     max-height: 80%;
-    max-width: 15%;
+    max-width: 30%;
 }
 
 

@@ -13,6 +13,12 @@ margin: 0 1vh 0;
 object-fit: contain;
 border-radius: 20%;
 
+@media (max-width: 600px) {
+    height: 6vh;
+    width: 6vh;
+    margin: 0;
+}
+
 img {
     border-radius: 20%;
     height:100%;

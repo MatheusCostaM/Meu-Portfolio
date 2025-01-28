@@ -1,5 +1,5 @@
 {
-    "CURRICULO": "RESUME",
+    "CURRICULO": "CURRICULUM VITAE",
     "APRESENTAÇÃO": "INTRODUCTION",
     "PROJETOS": "PROJECTS",
     "CONTATO": "CONTACT",
@@ -23,8 +23,19 @@
     "Python - Formação completa": "Python - Complete Training",
     "Lógica de Programação": "Programming Logic",
     "Curso": "Course",
-    "Tecnólogo": "Technologist",
+    "Tecnólogo": "Bachelor's degree",
     "Básico": "Basic",
     "Intermediário": "Intermediate",
-    "Avançado": "Advanced"
+    "Avançado": "Advanced",
+    "Desenvolvi um site de controle financeiro pessoal onde os usuários registram gastos, investimentos e renda, facilitando o planejamento e a organização das finanças.": "I developed a personal finance management website where users can track expenses, investments, and income, making financial planning and organization easier.",
+    "Desenvolvi um site portfólio para apresentar minhas experiências, projetos e habilidades nas tecnologias que domino.": "I developed a portfolio website to showcase my experiences, projects, and skills in the technologies I master.",
+    "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.": "Programming language essential for creating interactivity and dynamism in web pages. It allows the development of advanced features, such as animations, form validation, and integration with APIs.",
+    "Framework front-end que facilita o desenvolvimento de sites responsivos e otimizados para dispositivos móveis, oferecendo componentes pré-estilizados e prontos para uso.": "Front-end framework that facilitates the development of responsive and mobile-optimized websites, offering pre-styled components ready for use.",
+    "Linguagem de estilo utilizada para definir a aparência e o layout de páginas web, como cores, fontes, margens e responsividade. Essencial para criar designs atrativos e personalizados.": "Styling language used to define the appearance and layout of web pages, such as colors, fonts, margins, and responsiveness. Essential for creating attractive and customized designs.",
+    "Linguagem de marcação padrão para estruturar páginas web, definindo elementos como cabeçalhos, parágrafos, links e imagens. É a base de qualquer site.": "Standard markup language for structuring web pages, defining elements such as headers, paragraphs, links, and images. It is the foundation of any website.",
+    "Sistema de gerenciamento de banco de dados relacional popular e open-source, utilizado para armazenar e gerenciar dados de forma eficiente em aplicações web e outros sistemas.": "Popular open-source relational database management system, used to efficiently store and manage data in web applications and other systems.",
+    "Ambiente de execução para JavaScript no lado do servidor, permitindo a criação de aplicações escaláveis, como APIs e servidores web, com alta performance.": "JavaScript runtime environment on the server side, enabling the creation of scalable applications, such as APIs and web servers, with high performance.",
+    "Linguagem de programação amplamente usada no desenvolvimento web, especialmente para criar aplicações dinâmicas e servidores backend.": "Programming language widely used in web development, especially for creating dynamic applications and backend servers.",
+    "Linguagem de programação versátil, reconhecida por sua simplicidade e aplicabilidade em áreas como desenvolvimento web, ciência de dados, automação e inteligência artificial.": "Versatile programming language, known for its simplicity and applicability in areas such as web development, data science, automation, and artificial intelligence.",
+    "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.": "JavaScript library aimed at building interactive and dynamic user interfaces, widely used in the development of modern front-end applications."
 }

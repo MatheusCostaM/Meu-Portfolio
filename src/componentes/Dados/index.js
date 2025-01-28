@@ -14,15 +14,15 @@ import Email from '../../assets/img/email.svg';
 import Whatsapp from '../../assets/img/whatsapp.svg';
 
 export const Tags = [
-    { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação usada para criar interatividade em páginas web.", nivel: 3 },
-    { nome: "Bootstrap", image: Bootstrap, descricao: "Framework front-end para desenvolvimento de sites responsivos e móveis.", nivel: 1 },
-    { nome: "Css", image: Css, descricao: "Linguagem de estilo usada para definir a aparência e o layout de páginas web.", nivel: 3 },
-    { nome: "Html", image: Html, descricao: "Linguagem de marcação padrão para criar páginas web.", nivel: 3 },
-    { nome: "MySql", image: MySql, descricao: "Sistema de gerenciamento de banco de dados relacional popular e open-source.", nivel: 2 },
-    { nome: "Node", image: Node, descricao: "Ambiente de execução JavaScript no lado do servidor.", nivel: 2 },
-    { nome: "Php", image: Php, descricao: "Linguagem de programação amplamente usada para desenvolvimento web.", nivel: 1 },
-    { nome: "Python", image: Python, descricao: "Linguagem de programação versátil e popular para diversas áreas, como web, data science e automação.", nivel: 2 },
-    { nome: "React", image: ReactJS, descricao: "Biblioteca JavaScript para construir interfaces de usuário dinâmicas.", nivel: 2 },
+    { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.", nivel: 3 },
+    { nome: "Bootstrap", image: Bootstrap, descricao: "Framework front-end que facilita o desenvolvimento de sites responsivos e otimizados para dispositivos móveis, oferecendo componentes pré-estilizados e prontos para uso.", nivel: 1 },
+    { nome: "Css", image: Css, descricao: "Linguagem de estilo utilizada para definir a aparência e o layout de páginas web, como cores, fontes, margens e responsividade. Essencial para criar designs atrativos e personalizados.", nivel: 3 },
+    { nome: "Html", image: Html, descricao: "Linguagem de marcação padrão para estruturar páginas web, definindo elementos como cabeçalhos, parágrafos, links e imagens. É a base de qualquer site.", nivel: 3 },
+    { nome: "MySql", image: MySql, descricao: "Sistema de gerenciamento de banco de dados relacional popular e open-source, utilizado para armazenar e gerenciar dados de forma eficiente em aplicações web e outros sistemas.", nivel: 2 },
+    { nome: "Node", image: Node, descricao: "Ambiente de execução para JavaScript no lado do servidor, permitindo a criação de aplicações escaláveis, como APIs e servidores web, com alta performance.", nivel: 2 },
+    { nome: "Php", image: Php, descricao: "Linguagem de programação amplamente usada no desenvolvimento web, especialmente para criar aplicações dinâmicas e servidores backend.", nivel: 1 },
+    { nome: "Python", image: Python, descricao: "Linguagem de programação versátil, reconhecida por sua simplicidade e aplicabilidade em áreas como desenvolvimento web, ciência de dados, automação e inteligência artificial.", nivel: 2 },
+    { nome: "React", image: ReactJS, descricao: "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.", nivel: 2 },
     { nome: "Linkedin", image: Linkedin },
     { nome: "Github", image: Github },
     { nome: "Link", image: Link },
@@ -32,13 +32,13 @@ export const Tags = [
 
 
 import financasImg from "../../assets/img/finance.png";
-import portifolioImg from "../../assets/img/Portifolio.png";
+import portifolioImg from "../../assets/img/portifolio.png";
 
 
 export const Projetos = [
     {
         nome: "Site de Finanças",
-        descricao: "eafoknsadfnsaokfnlksdnflknsdlkfn fdsafjnpsdanfkvnaskld dfvkjasnvnsdo",
+        descricao: "Desenvolvi um site de controle financeiro pessoal onde os usuários registram gastos, investimentos e renda, facilitando o planejamento e a organização das finanças.",
         site: "http://financemylife.byethost13.com/",
         image: financasImg,
         git: "https://github.com/MatheusCostaM/FinanceMyLife",
@@ -47,7 +47,7 @@ export const Projetos = [
 
     {
         nome: "Portifólio",
-        descricao: "dfafasfsdafafdadsfasdfasdfsad",
+        descricao: "Desenvolvi um site portfólio para apresentar minhas experiências, projetos e habilidades nas tecnologias que domino.",
         site: "http://localhost:5173/",
         image: portifolioImg,
         git: "https://github.com/MatheusCostaM/MeuCV",

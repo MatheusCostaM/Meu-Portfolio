@@ -20,6 +20,11 @@ const Vidro = styled.div`
     width: 100%;
     height: 100%;
     border-radius: ${({ $bordaCurva }) => $bordaCurva || '0px'};
+
+    @media (max-width: 600px) {
+    
+        margin: 0 0 4vh;
+    }
 `;
 
 export default ({ children, $bordaCurva, $blur }) => {

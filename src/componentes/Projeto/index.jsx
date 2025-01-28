@@ -12,15 +12,21 @@ const Projeto = styled.div`
 display: flex;
 justify-content: space-around;
 align-items: center;
-width: 80%;
-margin: 2vw 0 2vw; 
+width: 70vw;
+margin: 4vw 0 4vw; 
 min-height: 25%;
+
+@media (max-width: 600px) {
+    width: 90vw;
+}
+
 
 div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin: 0;
 }
 
 Section{
@@ -28,10 +34,17 @@ Section{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 1000px) {
+        flex-wrap: wrap;
+    }
+    
 }
 
 img{
     max-width: 300px;
+    @media (max-width: 600px) {
+        max-width: 350px;
+    }
 }
 `;
 

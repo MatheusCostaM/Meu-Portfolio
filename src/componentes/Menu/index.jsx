@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styled, { ThemeConsumer } from "styled-components";
+import styled from "styled-components";
 import Interagible from '../Interagible';
 
 
@@ -10,6 +10,7 @@ display: flex;
 flex-direction: ${({ $posicao }) => (($posicao == "horizontal") ? "row" : "column")};
 justify-content: space-around;
 align-items: center;
+
 width: auto;
 height: auto;
 

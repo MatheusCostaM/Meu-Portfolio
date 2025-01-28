@@ -10,13 +10,24 @@ import MoveSimple from '../MoveSimple';
 import Vidro from '../Vidro';
 import { Projetos, Formacoes } from '../Dados';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 const Dashboard = styled.div`
 
 width:82vw;
 height: auto;
 z-index: 1;
+
+div{
+    flex-wrap: wrap;
+}
+
+section{
+    margin: 2vh 0 0;
+}
+
+@media (max-width: 600px) {
+    width:100vw;
+
+  }
 
 @keyframes appear {
     from{
@@ -31,6 +42,7 @@ z-index: 1;
 
 
 `
+
 
 
 const Foto = styled.img`
@@ -49,6 +61,10 @@ width: 30vw;
 background-color: white;
 margin: 1vh;
 
+
+@media (max-width: 600px) {
+    width: 70vw;
+}
 `;
 
 const Formacao = styled.div`
@@ -58,12 +74,23 @@ width: 60%;
 margin: 2vw;
 
 img{
-    max-width: 200px;
+    max-width: 250px;
     margin: 2vw;
 }
 
 div{
     justify-content: space-around !important;
+}
+
+@media (max-width: 600px) {
+    width: 80vw;
+
+    margin: 4vh 0 4vh;
+
+    img{
+        max-width: 200px;
+        margin:0;
+    }
 }
 
 
