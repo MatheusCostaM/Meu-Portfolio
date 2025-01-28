@@ -70,7 +70,7 @@ margin: 1vh;
 const Formacao = styled.div`
 
 
-width: 60%;
+width: 70%;
 margin: 2vw;
 
 img{
