@@ -31,8 +31,8 @@ export const Tags = [
 ];
 
 
-import financasImg from "../../assets/img/finance.png";
-import portifolioImg from "../../assets/img/portifolio.png";
+import financasImg from "../../assets/img/finance.svg";
+import portifolioImg from "../../assets/img/portifolio.svg";
 
 
 export const Projetos = [
