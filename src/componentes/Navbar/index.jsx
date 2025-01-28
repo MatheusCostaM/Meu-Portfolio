@@ -24,8 +24,15 @@ section {
     width: 4vh;
     height: 4vh;
     position:absolute;
-    top: 150%;
-    left: 5%;
+    top: 120%;
+    left: 3%;
+
+    div{
+        background: ${({ theme }) => (theme.body)};
+        width: 5vh;
+    height: 5vh;
+    border-radius: 5px;
+    }
 
     img{
         width: 100%;
@@ -67,9 +74,9 @@ export default ({ TrocaTema, abrir, trocaLingua, translate, abrirMenu, menuLat, 
         <Navbar $menuLat={menuLat}>
             <Vidro $blur={3}>
                 <section onClick={abrirMenu}>
-                    <Vidro>
+                    <div>
                         <img src={menu} />
-                    </Vidro>
+                    </div>
 
                 </section>
                 <Tema TrocaTema={TrocaTema} translate={translate} />
