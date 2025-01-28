@@ -72,7 +72,7 @@ export default ({ TrocaTema, abrir, trocaLingua, translate, abrirMenu, menuLat, 
     return (
 
         <Navbar $menuLat={menuLat}>
-            <Vidro $blur={3}>
+            <Vidro $blur={5}>
                 <section onClick={abrirMenu}>
                     <div>
                         <img src={menu} />

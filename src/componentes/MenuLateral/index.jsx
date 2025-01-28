@@ -48,7 +48,7 @@ export default ({ scroll, translate, menuLat, abrirMenu }) => {
 
     return (
         <MenuLateral $menuLat={menuLat}>
-            <Vidro $bordaCurva={menuLat ? "" : "20px"} $blur={3}>
+            <Vidro $bordaCurva={menuLat ? "" : "20px"} $blur={5}>
                 <Menu $posicao="vertical">
                     <section>
                         <Text tipoText={menuLat ? "titulo2" : "titulo2"}>MENU</Text>
