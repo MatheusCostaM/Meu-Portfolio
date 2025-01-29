@@ -28,6 +28,8 @@ export const Tags = [
     { nome: "Link", image: Link },
     { nome: "Whatsapp", image: Whatsapp },
     { nome: "Email", image: Email },
+    { nome: "Site de Finanças", image: financasImg },
+    { nome: "Portifólio", image: portifolioImg },
 ];
 
 
