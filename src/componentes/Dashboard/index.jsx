@@ -169,8 +169,8 @@ export default ({ abrir, translate }) => {
                     <Text>{translate("Entre em Contato e Vamos Trabalhar Juntos")}</Text>
                     <div>
                         <MoveSimple>
-                            <Tag tipo="Whatsapp" />
-                            <Tag tipo="Email" />
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5511947047934"><Tag tipo="Whatsapp" /></a>
+                            <a target="_blank" href="mailto:matheuscosta_ma@outlook.com?"><Tag tipo="Email" /></a>
                         </MoveSimple>
                     </div>
 
