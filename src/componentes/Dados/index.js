@@ -12,6 +12,9 @@ import Github from '../../assets/img/github.svg';
 import Link from '../../assets/img/link.svg';
 import Email from '../../assets/img/email.svg';
 import Whatsapp from '../../assets/img/whatsapp.svg';
+import Sqlite from '../../assets/img/sqlite.svg';
+import Flask from '../../assets/img/flask.svg';
+import Pandas from '../../assets/img/pandas.svg';
 
 export const Tags = [
     { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.", nivel: 3 },
@@ -29,12 +32,13 @@ export const Tags = [
     { nome: "Whatsapp", image: Whatsapp },
     { nome: "Email", image: Email },
     { nome: "Site de Finanças", image: financasImg },
-    { nome: "Portifólio", image: portifolioImg },
+    { nome: "Portifólio", image: portifolioImg }
 ];
 
 
 import financasImg from "../../assets/img/finance.svg";
 import portifolioImg from "../../assets/img/portifolio.svg";
+import desenvolvimentoImg from "../../assets/img/desenvolvendo.svg";
 
 
 export const Projetos = [
@@ -53,7 +57,7 @@ export const Projetos = [
         site: "http://localhost:5173/",
         image: portifolioImg,
         git: "https://github.com/MatheusCostaM/MeuCV",
-        tecnologias: ["React", "Node", "Bootstrap", "JavaScript", "Css", "Html"],
+        tecnologias: ["React", "JavaScript", "Css", "Html"],
     },
 ];
 
@@ -112,4 +116,8 @@ export const Formacoes = [
         dataFim: "2020",
     }
 ];
+
+export const Tecnologias = [
+    "JavaScript", "Css", "Html", "Php", "MySql", "React", "Python"
+]
 

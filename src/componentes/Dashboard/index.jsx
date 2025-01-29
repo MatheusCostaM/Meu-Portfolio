@@ -8,7 +8,7 @@ import Neon from '../Neon';
 import Projeto from '../Projeto';
 import MoveSimple from '../MoveSimple';
 import Vidro from '../Vidro';
-import { Projetos, Formacoes } from '../Dados';
+import { Projetos, Formacoes, Tecnologias } from '../Dados';
 
 const Dashboard = styled.div`
 
@@ -128,15 +128,9 @@ export default ({ abrir, translate }) => {
                             <Neon><Separador /></Neon>
                             <Text>{translate("Tecnologias que domino.")}</Text>
                             <div>
-                                <Tag abrir={abrir} tipo="JavaScript" />
-                                <Tag abrir={abrir} tipo="Node" />
-                                <Tag abrir={abrir} tipo="React" />
-                                <Tag abrir={abrir} tipo="Python" />
-                                <Tag abrir={abrir} tipo="Php" />
-                                <Tag abrir={abrir} tipo="MySql" />
-                                <Tag abrir={abrir} tipo="Bootstrap" />
-                                <Tag abrir={abrir} tipo="Css" />
-                                <Tag abrir={abrir} tipo="Html" />
+                                {Tecnologias.map((tec, index) => (
+                                    <Tag key={index} abrir={abrir} tipo={tec} />
+                                ))}
                             </div>
                         </section>
                         <section>
