@@ -1,5 +1,7 @@
 # Portfólio Pessoal
 
+![printinicial](printinicial.png)
+
 Este é o meu portfólio pessoal desenvolvido com **React**, onde você pode conhecer mais sobre mim, minhas formações, tecnologias que utilizo e os projetos que já desenvolvi. A página conta com recursos como **modo noturno e claro** e **internacionalização** (tradução entre português e inglês).
 
 ## Funcionalidades
