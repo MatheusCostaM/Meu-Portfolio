@@ -34,7 +34,7 @@ O portfólio é composto pelas seguintes seções:
 
 - **Formações**: Detalhes sobre minha formação acadêmica e cursos realizados.
 
-![printformacoes](./img/imageformation.png)
+![printformacoes](./img/imageformations.png)
 
 - **Currículo**: Currículo disponibilizado em pdf.
 
