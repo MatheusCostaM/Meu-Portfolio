@@ -12,12 +12,14 @@ import Github from '../../assets/img/github.svg';
 import Link from '../../assets/img/link.svg';
 import Email from '../../assets/img/email.svg';
 import Whatsapp from '../../assets/img/whatsapp.svg';
+import Java from '../../assets/img/java.svg';
 import Sqlite from '../../assets/img/sqlite.svg';
 import Flask from '../../assets/img/flask.svg';
 import Pandas from '../../assets/img/pandas.svg';
 
 export const Tags = [
     { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.", nivel: 3 },
+    { nome: "Java", image: Java, descricao: "Java é uma linguagem de programação versátil e amplamente utilizada no desenvolvimento de aplicações robustas e escaláveis. É ideal para sistemas corporativos, aplicações móveis (como Android) e soluções de servidores. Conhecida pela sua portabilidade e segurança, é uma escolha popular no mercado de tecnologia.", nivel: 2 },
     { nome: "Bootstrap", image: Bootstrap, descricao: "Framework front-end que facilita o desenvolvimento de sites responsivos e otimizados para dispositivos móveis, oferecendo componentes pré-estilizados e prontos para uso.", nivel: 1 },
     { nome: "Css", image: Css, descricao: "Linguagem de estilo utilizada para definir a aparência e o layout de páginas web, como cores, fontes, margens e responsividade. Essencial para criar designs atrativos e personalizados.", nivel: 3 },
     { nome: "Html", image: Html, descricao: "Linguagem de marcação padrão para estruturar páginas web, definindo elementos como cabeçalhos, parágrafos, links e imagens. É a base de qualquer site.", nivel: 3 },
@@ -118,6 +120,6 @@ export const Formacoes = [
 ];
 
 export const Tecnologias = [
-    "JavaScript", "Css", "Html", "Php", "MySql", "React", "Python"
+    "Java", "JavaScript", "Css", "Html", "Php", "MySql", "React", "Python"
 ]
 
