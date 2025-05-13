@@ -6,7 +6,7 @@
     "SOBRE": "ABOUT",
     "Desenvolvedor Full-Stack": "Full-Stack Developer",
     "Transforme seu projeto em realidade com soluções": "Turn your project into reality with solutions",
-    "Tecnologias que domino.": "Technologies I master.",
+    "Minhas Principais tecnologias.": "My Main Technologies.",
     "Clique nos Links": "Click the Links",
     "Entre em Contato e Vamos Trabalhar Juntos": "Get in Touch and Let's Work Together",
     "SOBRE MIM": "ABOUT ME",
@@ -37,5 +37,9 @@
     "Ambiente de execução para JavaScript no lado do servidor, permitindo a criação de aplicações escaláveis, como APIs e servidores web, com alta performance.": "JavaScript runtime environment on the server side, enabling the creation of scalable applications, such as APIs and web servers, with high performance.",
     "Linguagem de programação amplamente usada no desenvolvimento web, especialmente para criar aplicações dinâmicas e servidores backend.": "Programming language widely used in web development, especially for creating dynamic applications and backend servers.",
     "Linguagem de programação versátil, reconhecida por sua simplicidade e aplicabilidade em áreas como desenvolvimento web, ciência de dados, automação e inteligência artificial.": "Versatile programming language, known for its simplicity and applicability in areas such as web development, data science, automation, and artificial intelligence.",
-    "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.": "JavaScript library aimed at building interactive and dynamic user interfaces, widely used in the development of modern front-end applications."
+    "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.": "JavaScript library aimed at building interactive and dynamic user interfaces, widely used in the development of modern front-end applications.",
+    "Atualmente, estou desenvolvendo um projeto freelance no meu tempo livre: uma plataforma ERP voltada para uma empresa de logística. O sistema está sendo construído com uma arquitetura de microsserviços, o que garante modularidade, alta escalabilidade e facilidade de manutenção.": "Currently, I’m working on a freelance project in my free time: an ERP platform designed for a logistics company. The system is being built using a microservices architecture, which ensures modularity, high scalability, and ease of maintenance.",
+    "ERP empresa de logística": "ERP for a logistics company",
+    "PostgreSQL é um banco de dados relacional de código aberto, conhecido pela robustez e flexibilidade. Ele suporta transações ACID, consultas complexas e é altamente escalável, sendo ideal para empresas de todos os tamanhos.": "PostgreSQL is an open-source relational database known for its robustness and flexibility. It supports ACID transactions, complex queries, and is highly scalable, making it ideal for businesses of all sizes.",
+    "NestJS é um framework para backend em Node.js, construído com TypeScript. Ele usa Express (ou Fastify) como servidor HTTP e é ideal para criar aplicações escaláveis e de alto desempenho. Com uma arquitetura inspirada no Angular, facilita o desenvolvimento de APIs RESTful, GraphQL e microsserviços.": "NestJS is a framework for backend in Node.js, built with TypeScript. It uses Express (or Fastify) as the HTTP server and is ideal for building scalable, high-performance applications. With an Angular-inspired architecture, it simplifies the development of RESTful APIs, GraphQL, and microservices."
 }

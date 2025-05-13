@@ -252,11 +252,10 @@ export default ({ conteudo, translate }) => {
                                         <section>
                                             {Projetos.map((projeto, index) => (
 
-                                                <aside>
+                                                <aside key={index}>
 
                                                     {projeto.tecnologias.map((tecnologia, index) => {
                                                         if (tecnologia === tela.conteudo.nome) {
-                                                            console.log("dfsdf");
                                                             return (
                                                                 <div key={index}>
                                                                     <a target="_blank" href={projeto.site}>

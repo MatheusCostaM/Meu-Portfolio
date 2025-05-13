@@ -6,7 +6,7 @@
     "SOBRE": "SOBRE",
     "Desenvolvedor Full-Stack": "Desenvolvedor Full-Stack",
     "Transforme seu projeto em realidade com soluções": "Transforme seu projeto em realidade com soluções",
-    "Tecnologias que domino.": "Tecnologias que domino.",
+    "Minhas Principais tecnologias.": "Minhas Principais tecnologias.",
     "Clique nos Links": "Clique nos Links",
     "Entre em Contato e Vamos Trabalhar Juntos": "Entre em Contato e Vamos Trabalhar Juntos",
     "SOBRE MIM": "SOBRE MIM",
@@ -37,5 +37,9 @@
     "Ambiente de execução para JavaScript no lado do servidor, permitindo a criação de aplicações escaláveis, como APIs e servidores web, com alta performance.": "Ambiente de execução para JavaScript no lado do servidor, permitindo a criação de aplicações escaláveis, como APIs e servidores web, com alta performance.",
     "Linguagem de programação amplamente usada no desenvolvimento web, especialmente para criar aplicações dinâmicas e servidores backend.": "Linguagem de programação amplamente usada no desenvolvimento web, especialmente para criar aplicações dinâmicas e servidores backend.",
     "Linguagem de programação versátil, reconhecida por sua simplicidade e aplicabilidade em áreas como desenvolvimento web, ciência de dados, automação e inteligência artificial.": "Linguagem de programação versátil, reconhecida por sua simplicidade e aplicabilidade em áreas como desenvolvimento web, ciência de dados, automação e inteligência artificial.",
-    "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.": "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas."
+    "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.": "Biblioteca JavaScript voltada para a construção de interfaces de usuário interativas e dinâmicas, utilizada amplamente no desenvolvimento de aplicações front-end modernas.",
+    "Atualmente, estou desenvolvendo um projeto freelance no meu tempo livre: uma plataforma ERP voltada para uma empresa de logística. O sistema está sendo construído com uma arquitetura de microsserviços, o que garante modularidade, alta escalabilidade e facilidade de manutenção.": "Atualmente, estou desenvolvendo um projeto freelance no meu tempo livre: uma plataforma ERP voltada para uma empresa de logística. O sistema está sendo construído com uma arquitetura de microsserviços, o que garante modularidade, alta escalabilidade e facilidade de manutenção.",
+    "ERP empresa de logística": "ERP empresa de logística",
+    "PostgreSQL é um banco de dados relacional de código aberto, conhecido pela robustez e flexibilidade. Ele suporta transações ACID, consultas complexas e é altamente escalável, sendo ideal para empresas de todos os tamanhos.": "PostgreSQL é um banco de dados relacional de código aberto, conhecido pela robustez e flexibilidade. Ele suporta transações ACID, consultas complexas e é altamente escalável, sendo ideal para empresas de todos os tamanhos.",
+    "NestJS é um framework para backend em Node.js, construído com TypeScript. Ele usa Express (ou Fastify) como servidor HTTP e é ideal para criar aplicações escaláveis e de alto desempenho. Com uma arquitetura inspirada no Angular, facilita o desenvolvimento de APIs RESTful, GraphQL e microsserviços.": "NestJS é um framework para backend em Node.js, construído com TypeScript. Ele usa Express (ou Fastify) como servidor HTTP e é ideal para criar aplicações escaláveis e de alto desempenho. Com uma arquitetura inspirada no Angular, facilita o desenvolvimento de APIs RESTful, GraphQL e microsserviços."
 }

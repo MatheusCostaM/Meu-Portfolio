@@ -126,7 +126,7 @@ export default ({ abrir, translate }) => {
                             <Text tipoText="titulo2">{translate("Desenvolvedor Full-Stack")}</Text>
                             <Text tipoText="titulo3">{translate("Transforme seu projeto em realidade com soluções")}<br /> Full Stack de qualidade.</Text>
                             <Neon><Separador /></Neon>
-                            <Text>{translate("Tecnologias que domino.")}</Text>
+                            <Text>{translate("Minhas Principais tecnologias.")}</Text>
                             <div>
                                 {Tecnologias.map((tec, index) => (
                                     <Tag key={index} abrir={abrir} tipo={tec} />
@@ -190,8 +190,8 @@ export default ({ abrir, translate }) => {
                 </Animador>
 
                 {Formacoes.map((formacoes, index) => (
-                    <Animador>
-                        <Formacao key={index}>
+                    <Animador key={index}>
+                        <Formacao>
                             <Vidro $bordaCurva={"20px"}>
                                 <img src={formacoes.imagem} />
                                 <section>

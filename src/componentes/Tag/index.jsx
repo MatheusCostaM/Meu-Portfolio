@@ -33,6 +33,7 @@ export default ({ tipo, abrir }) => {
 
         for (let i = 0; i < Tags.length; i++) {
             if (Tags[i].nome === tipo) {
+
                 return { nome: Tags[i].nome, image: Tags[i].image, descricao: Tags[i].descricao, nivel: Tags[i].nivel };
             }
         }
@@ -41,7 +42,10 @@ export default ({ tipo, abrir }) => {
 
     let conteudoTag = qualTipo(tipo);
 
+    if (!conteudoTag) return null;
+
     const isAbrir = () => {
+        console.log(conteudoTag.image);
         abrir(conteudoTag);
     }
 
@@ -52,7 +56,6 @@ export default ({ tipo, abrir }) => {
             <Tag onClick={isAbrir}>
 
                 <Vidro $bordaCurva="20%">
-
                     <img src={conteudoTag.image} />
                 </Vidro>
 

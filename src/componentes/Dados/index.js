@@ -13,9 +13,8 @@ import Link from '../../assets/img/link.svg';
 import Email from '../../assets/img/email.svg';
 import Whatsapp from '../../assets/img/whatsapp.svg';
 import Java from '../../assets/img/java.svg';
-import Sqlite from '../../assets/img/sqlite.svg';
-import Flask from '../../assets/img/flask.svg';
-import Pandas from '../../assets/img/pandas.svg';
+import PostgresSQL from '../../assets/img/PostgreSQL.svg';
+import Nest from '../../assets/img/Nest.svg';
 
 export const Tags = [
     { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.", nivel: 3 },
@@ -34,13 +33,14 @@ export const Tags = [
     { nome: "Whatsapp", image: Whatsapp },
     { nome: "Email", image: Email },
     { nome: "Site de Finanças", image: financasImg },
-    { nome: "Portifólio", image: portifolioImg }
+    { nome: "Portifólio", image: portifolioImg },
+    { nome: "PostgresSQL", image: PostgresSQL, descricao: "PostgreSQL é um banco de dados relacional de código aberto, conhecido pela robustez e flexibilidade. Ele suporta transações ACID, consultas complexas e é altamente escalável, sendo ideal para empresas de todos os tamanhos.", nivel: 2 },
+    { nome: "Nest", image: Nest, descricao: "NestJS é um framework para backend em Node.js, construído com TypeScript. Ele usa Express (ou Fastify) como servidor HTTP e é ideal para criar aplicações escaláveis e de alto desempenho. Com uma arquitetura inspirada no Angular, facilita o desenvolvimento de APIs RESTful, GraphQL e microsserviços.", nivel: 2 }
 ];
 
 
 import financasImg from "../../assets/img/finance.svg";
 import portifolioImg from "../../assets/img/portifolio.svg";
-import desenvolvimentoImg from "../../assets/img/desenvolvendo.svg";
 import erpImg from "../../assets/img/erp.png";
 
 
@@ -48,7 +48,7 @@ export const Projetos = [
     {
         nome: "ERP empresa de logística",
         descricao: "Atualmente, estou desenvolvendo um projeto freelance no meu tempo livre: uma plataforma ERP voltada para uma empresa de logística. O sistema está sendo construído com uma arquitetura de microsserviços, o que garante modularidade, alta escalabilidade e facilidade de manutenção. ",
-        site: "http://financemylife.byethost13.com/",
+        site: "/ERPProject",
         image: erpImg,
         git: "",
         tecnologias: ["JavaScript", "Node", "React", "MySql"],
@@ -129,6 +129,6 @@ export const Formacoes = [
 ];
 
 export const Tecnologias = [
-    "Java", "JavaScript", "Css", "Html", "Php", "MySql", "React", "Python"
+    "Java", "JavaScript", "Node", "MySql", "PostgresSQL", "Nest", "React",
 ]
 
