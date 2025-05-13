@@ -41,9 +41,18 @@ export const Tags = [
 import financasImg from "../../assets/img/finance.svg";
 import portifolioImg from "../../assets/img/portifolio.svg";
 import desenvolvimentoImg from "../../assets/img/desenvolvendo.svg";
+import erpImg from "../../assets/img/erp.png";
 
 
 export const Projetos = [
+    {
+        nome: "ERP empresa de logística",
+        descricao: "Atualmente, estou desenvolvendo um projeto freelance no meu tempo livre: uma plataforma ERP voltada para uma empresa de logística. O sistema está sendo construído com uma arquitetura de microsserviços, o que garante modularidade, alta escalabilidade e facilidade de manutenção. ",
+        site: "http://financemylife.byethost13.com/",
+        image: erpImg,
+        git: "",
+        tecnologias: ["JavaScript", "Node", "React", "MySql"],
+    },
     {
         nome: "Site de Finanças",
         descricao: "Desenvolvi um site de controle financeiro pessoal onde os usuários registram gastos, investimentos e renda, facilitando o planejamento e a organização das finanças.",
