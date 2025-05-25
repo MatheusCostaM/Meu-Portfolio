@@ -18,7 +18,7 @@ import Nest from '../../assets/img/Nest.svg';
 
 export const Tags = [
     { nome: "JavaScript", image: JavaScript, descricao: "Linguagem de programação essencial para criar interatividade e dinamismo em páginas web. Permite desenvolver funcionalidades avançadas, como animações, validação de formulários e integração com APIs.", nivel: 3 },
-    { nome: "Java", image: Java, descricao: "Java é uma linguagem de programação versátil e amplamente utilizada no desenvolvimento de aplicações robustas e escaláveis. É ideal para sistemas corporativos, aplicações móveis (como Android) e soluções de servidores. Conhecida pela sua portabilidade e segurança, é uma escolha popular no mercado de tecnologia.", nivel: 2 },
+    { nome: "Java", image: Java, descricao: "Java é uma linguagem de programação versátil e amplamente utilizada no desenvolvimento de aplicações robustas e escaláveis. É ideal para sistemas corporativos, aplicações móveis (como Android) e soluções de servidores. Conhecida pela sua portabilidade e segurança, é uma escolha popular no mercado de tecnologia.", nivel: 3 },
     { nome: "Bootstrap", image: Bootstrap, descricao: "Framework front-end que facilita o desenvolvimento de sites responsivos e otimizados para dispositivos móveis, oferecendo componentes pré-estilizados e prontos para uso.", nivel: 1 },
     { nome: "Css", image: Css, descricao: "Linguagem de estilo utilizada para definir a aparência e o layout de páginas web, como cores, fontes, margens e responsividade. Essencial para criar designs atrativos e personalizados.", nivel: 3 },
     { nome: "Html", image: Html, descricao: "Linguagem de marcação padrão para estruturar páginas web, definindo elementos como cabeçalhos, parágrafos, links e imagens. É a base de qualquer site.", nivel: 3 },
@@ -83,8 +83,8 @@ export const Formacoes = [
         tipo: "Tecnólogo",
         imagem: fatec,
         unidade: "FATEC SBC",
-        dataIni: "07/2022",
-        dataFim: "06/2025",
+        dataIni: "01/2022",
+        dataFim: "11/2024",
     },
     {
         curso: "Python - Formação completa",
@@ -115,8 +115,8 @@ export const Formacoes = [
         tipo: "Curso",
         imagem: senai,
         unidade: "SENAI - Almirante Tamandaré",
-        dataIni: "2022",
-        dataFim: "2022",
+        dataIni: "2021",
+        dataFim: "2021",
     },
     {
         curso: "Lógica de Programação",
